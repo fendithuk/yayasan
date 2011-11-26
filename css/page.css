@@ -1,0 +1,369 @@
+body
+{
+    text-align: center;
+    background: green url('../image/bgUtama.jpg');
+    background-repeat: repeat;
+}
+
+a
+{
+    text-decoration: none;
+}
+/*-------------------------page wrap--------------------------------------*/
+.page_wrap
+{
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 80px;
+    width: 1500px;
+}
+
+.shadow
+{
+    box-shadow: 10px 15px 30px black;
+    border-radius: 16px;
+    
+}
+/*-----------------------menu----------------------------------------*/
+.menu
+{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.menu ul
+{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.menu ul li
+{
+    list-style: none;
+    display: inline-block;
+    padding: 20px;
+    text-align: center;
+    
+}
+.menu a
+{
+    color: rgb(215,215,62);
+    font-size: 23px;
+}
+
+.menu a:hover
+{
+    color: white;
+}
+
+/*-----------------------content----------------------------------------*/
+.content
+{
+    padding: 0;
+    
+}
+/*-----------------------content left------------------------------------------*/
+.content .contentLeft
+{
+    display: inline-block;
+    width: 270px;
+    margin: 0;
+    float: left;
+    height: 900px;
+/*    background-color: rgb(0,102,51);*/
+}
+
+.content .contentLeft ul
+{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    margin-left: -60px;
+    margin-top: -70px;
+}
+
+.content .contentLeft ul li
+{
+    list-style: none;
+    width: auto;
+    height: auto;
+    
+}
+
+.content .contentLeft ul li img
+{
+    height: 135px;
+    width: 200px;
+}
+
+.content .contentLeft div.a
+{
+    display: inline-block;
+    margin-right: 10px;
+    width: auto;
+    height: 900px;
+}
+
+.content .contentLeft div.a img
+{
+    width: 280px;
+    position: absolute;
+    z-index: -1;
+    margin-left: -2px;
+    height: 903px;
+}
+
+.content .contentLeft h2
+{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    width: 300px;
+    margin-left: -60px;
+    color: rgb(215,215,62);
+    text-shadow: 2px 4px 5px black
+}
+/*-----------------------content right------------------------------------------*/
+.content .contentRight
+{
+    display: inline-block;
+    width: 1170px;
+    height: 900px;
+}
+
+.content .contentRight ul.tabs
+{
+    background-color: rgb(0,153,0);
+    float: left;
+    margin: 0;
+    padding: 0;
+    height: 900px;
+}
+
+
+.content .contentRight ul.tabs li
+{
+    list-style: none;
+    width: 200px;
+    height: 180px;
+    text-align: center;
+}
+
+.content .contentRight ul.tabs img
+{
+    margin: 25px 0px 0px 0px;
+    padding: 0;
+    height: 100px;
+    width: 100px;
+}
+
+.content .contentRight ul.tabs li p
+{
+    color: rgb(215,215,62);
+    font-size: 23px;
+    text-shadow: 1px 2px 3px black
+}
+
+.content .contentRight div.panel
+{
+    background-color: rgb(0,102,51);
+    height: 900px;
+    width: 1232px;
+    margin-top: 0px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.content .contentRight div.panel .panel2
+{
+    background-color: rgb(0,153,0);
+    margin: 0;
+    padding: 0;
+    height: 800px;	 
+    width: 920px;
+    margin-left: 260px;
+    margin-top: -30px;
+    position: absolute;
+    border-radius: 20px;
+}
+
+/*-----------------------footer----------------------------------------*/
+.footer
+{
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    float: right;
+    
+}
+
+
+/*------------------------second style-----------------------------------*/
+
+/*.panel .scrollable
+{
+    position:relative;
+    overflow:hidden;
+    height: 800px;
+    width: 900px;
+}
+
+.panel .vertical
+{
+	position:relative;
+	overflow:hidden;	
+	height: 800px;	 
+	width: 900px;
+	border-top:1px solid #ddd;	
+}
+
+.panel .scrollable .items
+{
+    position:absolute;
+    height: 2000em;
+    margin: 0px;
+}
+
+.panel .scrollable .items .item {
+	border-bottom:1px solid #ddd;
+	margin:0px 0;
+	padding:0px;
+	font-size:12px;
+	height:180px;
+}
+
+
+.panel .scrollable .items .item img {
+	float:left;
+	margin-right:20px;
+	height:100px;
+	width:100px;
+}
+
+.panel .scrollable .items .item h3 {
+	margin:0 0 5px 0;
+	font-size:16px;
+	color:#456;
+	font-weight:normal;
+}
+
+-------action above scroll-----------
+#actions {
+	width:900px;
+	
+}
+
+#actions a {
+	font-size:11px;		
+	cursor:pointer;
+	color:#666;
+}
+
+#actions a:hover {
+	text-decoration:underline;
+	color:#000;
+}
+
+.disabled {
+	visibility:hidden;		
+}
+
+.next {
+	float:right;
+}	*/
+
+/* root element for scrollable 
+.scrollable {
+
+	 required settings 
+	position:relative;
+	overflow:hidden;
+
+	 vertical scrollables have typically larger height than width but not now 
+	height: 665px;
+	width: 700px;
+}
+
+ root element for scrollable items 
+.scrollable .items {
+	position:absolute;
+
+	 this time we have very large space for the height 
+	height:20000em;
+}
+
+ root element for scrollable 
+.vertical {  
+	
+	 required settings 
+	position:relative;
+	overflow:hidden;	
+
+	 vertical scrollers have typically larger height than width 	
+	height: 665px;	 
+	width: 700px;
+	border-top:1px solid #ddd;	
+}
+
+ root element for scrollable items 
+.items {	
+	position:absolute;
+	
+	 this time we have very large space for height 	
+	height:20000em;	
+	margin: 0px;
+}
+
+ single scrollable item 
+.item {
+	border-bottom:1px solid #ddd;
+	margin:10px 0;
+	padding:15px;
+	font-size:12px;
+	height:180px;
+}
+
+ elements inside single item 
+.item img {
+	float:left;
+	margin-right:20px;
+	height:180px;
+	width:240px;
+}
+
+.item h3 {
+	margin:0 0 5px 0;
+	font-size:16px;
+	color:#456;
+	font-weight:normal;
+}
+
+ the action buttons above the scrollable 
+#actions {
+	width:700px;
+	margin:30px 0 10px 0;	
+}
+
+#actions a {
+	font-size:11px;		
+	cursor:pointer;
+	color:#666;
+}
+
+#actions a:hover {
+	text-decoration:underline;
+	color:#000;
+}
+
+.disabled {
+	visibility:hidden;		
+}
+
+.next {
+	float:right;
+}	*/
+
