@@ -1,8 +1,17 @@
 body
 {
     text-align: center;
-    background: green url('../image/bgUtama.jpg');
+    background:url('../image/bgUtama.jpg');
     background-repeat: repeat;
+    background-color: #3faa4c;
+    font-family: arial;
+}
+
+@font-face
+{
+font-family: arial;
+src: url('font/arial.ttf');
+    
 }
 
 a
@@ -13,17 +22,20 @@ a
 .page_wrap
 {
     text-align: left;
+    margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
-    padding: 80px;
-    width: 1500px;
+    width: 950px;
+    height: auto;
 }
 
 .shadow
 {
-    box-shadow: 10px 15px 30px black;
+    box-shadow: 5px 0px 35px black;
     border-radius: 16px;
-    
+    margin: 0;
+    padding: 0;
+    height: 660px;
 }
 /*-----------------------menu----------------------------------------*/
 .menu
@@ -31,12 +43,12 @@ a
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     height: auto;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .menu ul
 {
-    margin: 0;
+    margin: 0px 0px 0px 260px;
     padding: 0;
     text-align: center;
 }
@@ -45,14 +57,13 @@ a
 {
     list-style: none;
     display: inline-block;
-    padding: 20px;
     text-align: center;
-    
+    padding: 10px
 }
 .menu a
 {
     color: rgb(215,215,62);
-    font-size: 23px;
+    font-size: 18px;
 }
 
 .menu a:hover
@@ -64,17 +75,17 @@ a
 .content
 {
     padding: 0;
-    
 }
 /*-----------------------content left------------------------------------------*/
 .content .contentLeft
 {
     display: inline-block;
-    width: 270px;
+    width: 180px;
     margin: 0;
     float: left;
-    height: 900px;
-/*    background-color: rgb(0,102,51);*/
+    height: 660px;
+/*    background: rgb(0,102,51);
+    z-index: -2;*/
 }
 
 .content .contentLeft ul
@@ -82,8 +93,8 @@ a
     margin: 0;
     padding: 0;
     position: absolute;
-    margin-left: -60px;
-    margin-top: -70px;
+    margin-left: -20px;
+    margin-top: -40px;
 }
 
 .content .contentLeft ul li
@@ -96,8 +107,8 @@ a
 
 .content .contentLeft ul li img
 {
-    height: 135px;
-    width: 200px;
+    height: 100px;
+    width: 110px;
 }
 
 .content .contentLeft div.a
@@ -110,11 +121,11 @@ a
 
 .content .contentLeft div.a img
 {
-    width: 280px;
+    width: 180px;
     position: absolute;
     z-index: -1;
     margin-left: -2px;
-    height: 903px;
+    height: 664px;
 }
 
 .content .contentLeft h2
@@ -123,8 +134,9 @@ a
     padding: 0;
     position: absolute;
     text-align: center;
+    font-size: 14px;
     width: 300px;
-    margin-left: -60px;
+    margin-left: -90px;
     color: rgb(215,215,62);
     text-shadow: 2px 4px 5px black
 }
@@ -132,8 +144,8 @@ a
 .content .contentRight
 {
     display: inline-block;
-    width: 1170px;
-    height: 900px;
+    width: 630px;
+    height: 600px;
 }
 
 .content .contentRight ul.tabs
@@ -142,38 +154,42 @@ a
     float: left;
     margin: 0;
     padding: 0;
-    height: 900px;
+    height: 660px;
 }
 
 
 .content .contentRight ul.tabs li
 {
     list-style: none;
-    width: 200px;
-    height: 180px;
+    width: 118px;
+    height: 132px;
     text-align: center;
+    margin-left: 8px;
+    
 }
 
 .content .contentRight ul.tabs img
 {
-    margin: 25px 0px 0px 0px;
+    margin: 20px 0px 0px 0px;
     padding: 0;
-    height: 100px;
-    width: 100px;
+    height: 60px;
+    width: 60px;
 }
 
 .content .contentRight ul.tabs li p
 {
     color: rgb(215,215,62);
-    font-size: 23px;
-    text-shadow: 1px 2px 3px black
+    font-size: 14px;
+    text-shadow: 1px 2px 3px black;
+    margin: 10px 0px 0px 0px;
+    padding: 0;
 }
 
 .content .contentRight div.panel
 {
     background-color: rgb(0,102,51);
-    height: 900px;
-    width: 1232px;
+    height: 660px;
+    width: 772px;
     margin-top: 0px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -184,9 +200,9 @@ a
     background-color: rgb(0,153,0);
     margin: 0;
     padding: 0;
-    height: 800px;	 
-    width: 920px;
-    margin-left: 260px;
+    height: 500px;
+    width: 500px;
+    margin-left: 150px;
     margin-top: -30px;
     position: absolute;
     border-radius: 20px;
@@ -198,7 +214,6 @@ a
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
     float: right;
-    
 }
 
 

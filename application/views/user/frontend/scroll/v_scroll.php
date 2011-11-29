@@ -1,154 +1,83 @@
-<style type="text/css">
-    .scrollable {
-        position:relative;
-        overflow:hidden;
-        height: 800px;
-        width: 800px;
-        background-color: white;
-    }
+<div id="scrollbar1">
 
-    .scrollable .items {
-        position:absolute;
-        height:20000em;
-    }
-    .vertical {  
-        position:relative;
-        overflow:hidden;	
-        height: 700px;	 
-        width: 900px;
-        margin-top: -5px;
-        border-radius: 20px;
-        background-color: rgb(0,153,0);
-        
-    }
+    <div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
+    <div class="viewport">
+        <div class="overview">
 
-    .items {	
-        position:absolute;
-        height:20000em;	
-        margin: 0px;
-        width: 960px;
-    }
+            
+            <h3>Sketsa</h3>
 
+            <hr>
+            <h4>MENAKAR FILSAFAT DI PANGGUNG REALITAS</h4>
+            
+            <p>
+                <img class="img_yayasan" src="<?php echo base_url(); ?>image/Barcelona_128.png"/>terminologi filsafat mempunyai kompleksitas pemikiran yang beragam karena mempunyai pembacaan terhadap metode, aliran dan tujuan yang merupakan persentasi dalam seluruh konstruk pemikiran 
+                seorang filsuf. disisi lain, filsafat bukan berasal dari ketiadaan serta perlu memperhatikan latar belakang kerja atau pencarian , lous kattsoff dalam. yang dilakukan 
+                oleh MENAKAR FILSAFAT DI PO2 kebijaksanaan (love of wisdom) Dan kata filsafat merupakan Arabisasi, suatu mashdar yang berarti kerja atau pencarian yang 
+            </p>
+            
+            <ul style="margin: 0; padding: 0;">
+                <li style="display: inline-block"><hr style="border: 1px solid rgb(0,102,51); width: 210px;"></li>
+                <li style="display: inline-block; margin-left: 5px; margin-right: 5px"><img src="<?php echo base_url(); ?>image/scrolIco.png" style="height: 30px; width: 30px"/></li>
+                <li style="display: inline-block"><hr style="border: 1px solid rgb(0,102,51); width: 210px;"></li>
+            </ul>
+            <h3>Magnis dis parturient montes</h3>
+            <hr>
+            <h4>judul</h4>
+            
+            <p><img class="img_yayasan" src="<?php echo base_url(); ?>image/Barcelona_128.png"/>ondoel ondoel ondeol ondoel ondoel ondoels iaculis eu. Duis egestas augue quis ante ornare eu tincidunt magna interdum. Vestibulum posuere risus non ipsum sollicitudin quis viverra ante feugiat. Pellentesque non faucibus lorem. Nunc tincidunt diam nec risus ornare quis porttitor enim pretium. Ut adipiscing tempor massa, a ullamcorper massa bibendum at. Suspendisse potenti. In vestibulum enim orci, nec consequat turpis. Suspendisse sit amet tellus a quam volutpat porta. Mauris ornare augue ut diam tincidunt elementum. Vivamus commodo dapibus est, a gravida lorem pharetra eu. Maecenas ultrices cursus tellus sed congue. Cras nec nulla erat.</p>
+            
+            <ul style="margin: 0; padding: 0;">
+                <li style="display: inline-block"><hr style="border: 1px solid rgb(0,102,51); width: 210px;"></li>
+                <li style="display: inline-block; margin-left: 5px; margin-right: 5px"><img src="<?php echo base_url(); ?>image/scrolIco.png" style="height: 30px; width: 30px"/></li>
+                <li style="display: inline-block"><hr style="border: 1px solid rgb(0,102,51); width: 210px;"></li>
+            </ul>
+            <h3>Magnis dis parturient montes</h3>
+            <hr>
+            <h4>judul</h4>
+            
+            <p><img class="img_yayasan" src="<?php echo base_url(); ?>image/Barcelona_128.png"/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae velit at velit pretium sodales. Maecenas egestas imperdiet mauris, vel elementum turpis iaculis eu. Duis egestas augue quis ante ornare eu tincidunt magna interdum. Vestibulum posuere risus non ipsum sollicitudin quis viverra ante feugiat. Pellentesque non faucibus lorem. Nunc tincidunt diam nec risus ornare quis porttitor enim pretium. Ut adipiscing tempor massa, a ullamcorper massa bibendum at. Suspendisse potenti. In vestibulum enim orci, nec consequat turpis. Suspendisse sit amet tellus a quam volutpat porta. Mauris ornare augue ut diam tincidunt elementum. Vivamus commodo dapibus est, a gravida lorem pharetra eu. Maecenas ultrices cursus tellus sed congue. Cras nec nulla erat.</p>
+            
+            <ul style="margin: 0; padding: 0;">
+                <li style="display: inline-block"><hr style="border: 1px solid rgb(0,102,51); width: 210px;"></li>
+                <li style="display: inline-block; margin-left: 5px; margin-right: 5px"><img src="<?php echo base_url(); ?>image/scrolIco.png" style="height: 30px; width: 30px"/></li>
+                <li style="display: inline-block"><hr style="border: 1px solid rgb(0,102,51); width: 210px;"></li>
+            </ul>
+            <h3>Magnis dis parturient montes</h3>
+            <hr>
+            <h4>judul</h4>
+            
+            <p><img class="img_yayasan" src="<?php echo base_url(); ?>image/Barcelona_128.png"/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae velit at velit pretium sodales. Maecenas egestas imperdiet mauris, vel elementum turpis iaculis eu. Duis egestas augue quis ante ornare eu tincidunt magna interdum. Vestibulum posuere risus non ipsum sollicitudin quis viverra ante feugiat. Pellentesque non faucibus lorem. Nunc tincidunt diam nec risus ornare quis porttitor enim pretium. Ut adipiscing tempor massa, a ullamcorper massa bibendum at. Suspendisse potenti. In vestibulum enim orci, nec consequat turpis. Suspendisse sit amet tellus a quam volutpat porta. Mauris ornare augue ut diam tincidunt elementum. Vivamus commodo dapibus est, a gravida lorem pharetra eu. Maecenas ultrices cursus tellus sed congue. Cras nec nulla erat.</p>
+            
+            <ul style="margin: 0; padding: 0;">
+                <li style="display: inline-block"><hr style="border: 1px solid rgb(0,102,51); width: 210px;"></li>
+                <li style="display: inline-block; margin-left: 5px; margin-right: 5px"><img src="<?php echo base_url(); ?>image/scrolIco.png" style="height: 30px; width: 30px"/></li>
+                <li style="display: inline-block"><hr style="border: 1px solid rgb(0,102,51); width: 210px;"></li>
+            </ul>
+            <h3>Magnis dis parturient montes</h3>
+            <hr>
+            <h4>judul</h4>
+            
+            <p><img class="img_yayasan" src="<?php echo base_url(); ?>image/Barcelona_128.png"/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae velit at velit pretium sodales. Maecenas egestas imperdiet mauris, vel elementum turpis iaculis eu. Duis egestas augue quis ante ornare eu tincidunt magna interdum. Vestibulum posuere risus non ipsum sollicitudin quis viverra ante feugiat. Pellentesque non faucibus lorem. Nunc tincidunt diam nec risus ornare quis porttitor enim pretium. Ut adipiscing tempor massa, a ullamcorper massa bibendum at. Suspendisse potenti. In vestibulum enim orci, nec consequat turpis. Suspendisse sit amet tellus a quam volutpat porta. Mauris ornare augue ut diam tincidunt elementum. Vivamus commodo dapibus est, a gravida lorem pharetra eu. Maecenas ultrices cursus tellus sed congue. Cras nec nulla erat.</p>
+            
+            <ul style="margin: 0; padding: 0;">
+                <li style="display: inline-block"><hr style="border: 1px solid rgb(0,102,51); width: 210px;"></li>
+                <li style="display: inline-block; margin-left: 5px; margin-right: 5px"><img src="<?php echo base_url(); ?>image/scrolIco.png" style="height: 30px; width: 30px"/></li>
+                <li style="display: inline-block"><hr style="border: 1px solid rgb(0,102,51); width: 210px;"></li>
+            </ul>
+            <h3>Magnis dis parturient montes</h3>
+            <hr>
+            <h4>judul</h4>
+            
+            <p><img class="img_yayasan" src="<?php echo base_url(); ?>image/Barcelona_128.png"/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae velit at velit pretium sodales. Maecenas egestas imperdiet mauris, vel elementum turpis iaculis eu. Duis egestas augue quis ante ornare eu tincidunt magna interdum. Vestibulum posuere risus non ipsum sollicitudin quis viverra ante feugiat. Pellentesque non faucibus lorem. Nunc tincidunt diam nec risus ornare quis porttitor enim pretium. Ut adipiscing tempor massa, a ullamcorper massa bibendum at. Suspendisse potenti. In vestibulum enim orci, nec consequat turpis. Suspendisse sit amet tellus a quam volutpat porta. Mauris ornare augue ut diam tincidunt elementum. Vivamus commodo dapibus est, a gravida lorem pharetra eu. Maecenas ultrices cursus tellus sed congue. Cras nec nulla erat.</p>
+            
+            <ul style="margin: 0; padding: 0;">
+                <li style="display: inline-block"><hr style="border: 1px solid rgb(0,102,51); width: 210px;"></li>
+                <li style="display: inline-block; margin-left: 5px; margin-right: 5px"><img src="<?php echo base_url(); ?>image/scrolIco.png" style="height: 30px; width: 30px"/></li>
+                <li style="display: inline-block"><hr style="border: 1px solid rgb(0,102,51); width: 210px;"></li>
+            </ul>
 
-    .item {
-        
-        border-right: 5px dotted rgb(0,102,51);
-        margin:10px 0;
-        padding:15px;
-        font-size:12px;
-        height:550px;
-        width: 950px;
-        overflow: hidden;
-        text-align: left;
-    }
-
-
-    .item img {
-        float:left;
-        margin-right:20px;
-        height:180px;
-        width:240px;
-    }
-
-    .item h3 {
-        margin:0 0 0px 20;
-        font-size:30px;
-        color:#456;
-        font-weight:normal;
-        position: absolute;
-    }
-
-    .item p
-    {
-        text-align: justify;
-        font-size: 23px;
-        color: white;
-    }
-
-
-    #actions {
-        width:700px;
-        margin:30px 0 10px 0;	
-    }
-
-    #actions a {
-        font-size:23px;		
-        cursor:pointer;
-        color:#666;
-    }
-
-    #actions a:hover {
-        text-decoration:underline;
-        color:#000;
-    }
-
-    .disabled {
-        visibility:hidden;		
-    }
-
-    .next {
-        float:right;
-    }	
-
-    .prev
-    {
-        margin-left: 100px;
-        float: left;
-    }
-
-    div.judul h2
-    {
-        float: left;
-        color: rgb(215,215,62);
-        margin: 5px 0px 0px 20px;
-        font-size: 30px;
-        text-shadow: 2px 4px 5px black;
-
-    }
-
-
-</style>
-<div class="judul">
-    <h2>Sketsa</h2>
-</div>
-
-<div id="actions">
-    <a class="prev">&laquo; kembali</a>
-    <a class="next">selanjutnya &raquo;</a>
-</div>
-<div class="scrollable vertical">
-
-
-    <div class="items">
-        <!--list-->
-        <div>
-
-            <div class="item">
-                <?php $this->load->view('user/frontend/scroll/v_scroll2'); ?>
-            </div>
 
         </div>
-
-        <!--list-->
-        <div>
-
-            <div class="item">
-                <?php $this->load->view('user/frontend/scroll/v_scroll2'); ?>
-            </div>
-
-        </div>
-
-        
     </div>
-
-    <script>
-
-        $(function() {			
-            $(".scrollable").scrollable({ vertical: true, mousewheel: true });		
-        });
-    </script>
-
-
-
-
-
+</div>	

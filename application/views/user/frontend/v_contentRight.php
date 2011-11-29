@@ -2,7 +2,7 @@
     <!-- tabs -->
     <ul class="tabs">
         <a href="#"><li style="background-color: rgb(0,102,51);border-top-left-radius:20px;
-            border-bottom-left-radius:20px">
+                        border-bottom-left-radius:20px">
                 <img src="<?php echo base_url(); ?>image/homeIco.png"/>
                 <p>Beranda</p>
             </li></a>
@@ -26,16 +26,14 @@
 
     <!-- panel -->
     <div class="panel">
-        <div>
-            <div align="center" style="padding-top: 80px;">
-            <div class="panel2">
-                <?php $this->load->view("user/frontend/scroll/v_scroll"); ?>
-            </div>
-            
-        </div>  
-        </div>
-        
-        
+
+        <?php $this->load->view('user/frontend/scroll/v_scroll_kegiatan'); ?>
+        <?php $this->load->view('user/frontend/scroll/v_scroll_peluang'); ?>
+        <?php $this->load->view('user/frontend/scroll/v_scroll_anggota'); ?>
+        <?php $this->load->view('user/frontend/scroll/v_scroll_profil'); ?>
+        <?php $this->load->view('user/frontend/scroll/v_scroll'); ?>  
+
     </div> <!--end panel-->
-   
+    
+
 </div>

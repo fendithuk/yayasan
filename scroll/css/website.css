@@ -1,0 +1,378 @@
+/* Tiny Scrollbar */
+
+
+
+/*------------------------scrollbar 1-------------------------------------------------*/
+
+#scrollbar1
+{
+    width: 590px; 
+    background-color: rgb(0,153,0);
+    position: absolute ;
+    margin-top: 30px;
+    margin-left: 150px;
+    border-radius: 20px;
+    height: 600px;
+}
+
+#scrollbar1 .viewport
+{ width: 513px;
+  height: 590px;
+  overflow: hidden;
+  position: relative; 
+  text-align: center;
+  margin-left: 30px;
+}
+
+
+
+#scrollbar1 .viewport h3
+{
+    color: rgb(215,215,62);
+    text-align: left;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+#scrollbar1 .viewport p
+{
+    color: white;
+    text-align: justify;
+    overflow: hidden;
+    position: relative;
+    width: 480px;
+}
+
+
+/*----------------scrollbar 2--------------------------------------*/
+#scrollbar2
+{
+    width: 590px; 
+    background-color: rgb(0,153,0);
+    position: absolute ;
+    margin-top: 30px;
+    margin-left: 150px;
+    border-radius: 20px;
+    height: 600px;
+}
+
+#scrollbar2 .viewport
+{
+    width: 513px;
+    height: 590px;
+    overflow: hidden;
+    position: relative; 
+    text-align: center;
+    margin-left: 30px;
+}
+
+
+#scrollbar2 .viewport h3
+{
+    color: rgb(215,215,62);
+    text-align: left;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+#scrollbar2 .viewport p
+{
+    color: white;
+    text-align: justify;
+    text-indent: 20px;
+    overflow: hidden;
+    position: relative;
+    height: 190px;
+    width: 480px;
+    font-weight: bold;
+    margin-bottom: -60px;
+}
+
+#scrollbar1 .viewport .img_yayasan
+{
+
+    float: left;
+    height: 200px;
+    width: 200px;
+
+}
+
+#scrollbar1 .viewport img
+{
+
+    float: left;
+    height: 20px;
+    width: 20px;
+
+}
+
+#scrollbar1 .viewport h4
+{
+    color: white;
+    font-size: 18px;
+}
+/*-----------------scrollbar 3---------------------------------------------------*/
+#scrollbar3
+{
+    width: 590px; 
+    background-color: rgb(0,153,0);
+    position: absolute ;
+    margin-top: 30px;
+    margin-left: 150px;
+    border-radius: 20px;
+    height: 600px;
+}
+
+#scrollbar3 .viewport
+{
+    width: 513px;
+    height: 590px;
+    overflow: hidden;
+    position: relative; 
+    text-align: center;
+    margin-left: 30px;
+}
+
+#scrollbar3 .viewport p
+{
+    color: white;
+    text-align: justify;
+    text-indent: 20px;
+    overflow: hidden;
+    position: relative;
+    width: 480px;
+}
+
+#scrollbar3 .viewport h3
+{
+    color: rgb(215,215,62);
+    text-align: left;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+#scrollbar3 .viewport table
+{
+    margin: 0px 0px 50px 0px;
+    padding: 0;
+    text-align: center;
+    width: 480px;
+    border: 1px solid rgb(0,102,51);    
+}
+
+#scrollbar3 .viewport table tr
+{
+    height: 20px;
+
+}
+
+#scrollbar3 .viewport select
+{
+    margin: -5px 0px 0px 0px;
+    padding: 0;
+    color: rgb(215,215,62);
+    position: absolute;
+    background-color: rgb(0,102,51);   
+    border: 1px solid rgb(0,102,51);   
+    font-size: 14px;
+    border-radius: 2px;
+    width: 160px;
+}
+
+#scrollbar3 .viewport select option
+{
+    color: black;
+    
+}
+#scrollbar3 .viewport hr
+{
+    border: 1px solid rgb(0,102,51);
+    overflow: hidden;
+    position: relative;
+    
+}
+/*----------------scrollbar 4--------------------------------------*/
+
+#scrollbar4
+{
+    width: 590px; 
+    background-color: rgb(0,153,0);
+    position: absolute ;
+    margin-top: 30px;
+    margin-left: 150px;
+    border-radius: 20px;
+    height: 600px;
+}
+#scrollbar4 .viewport
+{
+    width: 513px;
+    height: 590px;
+    overflow: hidden;
+    position: relative; 
+    text-align: center;
+    margin-left: 30px;
+}
+
+#scrollbar4 .viewport p
+{
+    color: white;
+    text-align: justify;
+    text-indent: 20px;
+    overflow: hidden;
+    position: relative;
+    width: 480px;
+}
+
+#scrollbar4 .viewport h3
+{
+    color: rgb(215,215,62);
+    text-align: left;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+/*--------------scrollbar 5--------------------------------------------*/
+#scrollbar5 .viewport 
+{
+    width: 513px;
+    height: 590px;
+    overflow: hidden;
+    position: relative; 
+    text-align: center;
+    margin-left: 30px;
+}
+#scrollbar5
+{ 
+    width: 590px; 
+    background-color: rgb(0,153,0);
+    position: absolute ;
+    margin-top: 30px;
+    margin-left: 150px;
+    border-radius: 20px;
+    height: 600px;
+
+}
+
+#scrollbar5 .viewport h3
+{
+    color: rgb(215,215,62);
+    text-align: left;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+#scrollbar5 .viewport img
+{
+
+    float: left;
+    height: 200px;
+    width: 200px;
+
+}
+
+#scrollbar5 .viewport p
+{
+    color: white;
+    text-align: justify;
+    overflow: hidden;
+    position: relative;
+    height: 190px;
+    width: 480px;
+    font-weight: bold;
+
+}
+
+#scrollbar5 .viewport span
+{
+    padding: 0;    
+    position: absolute;
+    margin-top: -35px;    
+    margin-left: 324px;
+    background-color: rgb(0,153,0);
+    color: white;
+}
+
+#scrollbar5 .viewport span pre
+{
+    margin: 0;
+    padding: 0;
+    color: aqua;
+    display: inline;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#scrollbar5 .viewport h4
+{
+    color: white;
+    display: block;
+    text-align: left
+}
+
+
+#scrollbar1 .viewport hr,#scrollbar2 .viewport hr,#scrollbar4 .viewport hr,#scrollbar5 .viewport hr
+{
+    border: 1px solid rgb(0,102,51);
+    overflow: hidden;
+    position: relative;
+    
+}
+
+
+#scrollbar1 .overview,#scrollbar2 .overview,#scrollbar3 .overview,#scrollbar4 .overview,#scrollbar5 .overview 
+{ 
+    list-style: none; 
+    position: absolute;
+    left: 0; 
+    top: 0; 
+    padding: 0; 
+    margin: 20px 0px 0px 0px; 
+    width: 500px;
+}
+#scrollbar1 .scrollbar,#scrollbar2 .scrollbar,#scrollbar3 .scrollbar,#scrollbar4 .scrollbar,#scrollbar5 .scrollbar
+{ 
+    /*    background: transparent url(../images/bg-scrollbar-track-y.png) no-repeat 0 0;*/
+    border-right: 4px dotted black;
+    position: absolute;
+    background-position: 0 0; 
+    margin-left: 555px;
+    width: 1px; 
+
+
+}
+#scrollbar1 .track,#scrollbar2 .track,#scrollbar3 .track,#scrollbar4 .track,#scrollbar5 .track
+{ 
+    /*    background: transparent url(../images/bg-scrollbar-trackend-y.png) no-repeat 0 100%;*/
+    height: 100%;
+    width:13px;
+    position: relative;
+    padding: 0 1px;
+
+}
+#scrollbar1 .thumb,#scrollbar2 .thumb,#scrollbar3 .thumb,#scrollbar4 .thumb,#scrollbar5 .thumb
+{ 
+    background: transparent url(../images/scrolIco.png) no-repeat 20% 0 ;
+    height: 10px; 
+    width: 40px; 
+    cursor: pointer;    
+    position: relative;
+    margin-left: -16px;
+
+
+}
+#scrollbar1 .thumb .end,#scrollbar2 .thumb .end,#scrollbar3 .thumb .end,#scrollbar4 .thumb .end,#scrollbar5 .thumb .end 
+{ background: transparent url(../images/scrolIco.png) no-repeat 50% 0; 
+  overflow: hidden;
+  height: 5px; 
+  width: 25px;
+
+}
+#scrollbar1 .disable,#scrollbar2 .disable,#scrollbar3 .disable,#scrollbar4 .disable,#scrollbar5 .disable
+{ 
+    display: none;
+}
+
