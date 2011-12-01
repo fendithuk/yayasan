@@ -4,7 +4,7 @@
 <head>
 
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Simplpan - Admin Panel</title>
+	<title>Admin Insan Harmoni</title>
 	
 	<!-- Imports General CSS and jQuery CSS -->
         <link href="<?php echo base_url();?>cssadmin/screen.css" rel="stylesheet" media="screen" type="text/css" />

@@ -163,18 +163,35 @@
     border: 1px solid rgb(0,102,51);    
 }
 
-#scrollbar3 .viewport table tr
+#scrollbar3 .viewport table thead tr
 {
     height: 20px;
+    border: 1px solid rgb(0,102,51);    
+}
+#scrollbar3 .viewport table thead tr td
+{
+    
+    border: 1px solid rgb(0,102,51);    
+}
 
+#scrollbar3 .viewport table tbody tr
+{
+    height: 20px;
+    border: 1px solid rgb(0,102,51);    
+}
+#scrollbar3 .viewport table tbody tr td
+{
+    
+    border: 1px solid rgb(0,102,51);    
 }
 
 #scrollbar3 .viewport select
 {
-    margin: -5px 0px 0px 0px;
+    margin-top: -5px;
+    margin-left: -335px;
     padding: 0;
     color: rgb(215,215,62);
-    position: absolute;
+    position: static;
     background-color: rgb(0,102,51);   
     border: 1px solid rgb(0,102,51);   
     font-size: 14px;
@@ -268,6 +285,7 @@
 #scrollbar5 .viewport img
 {
 
+    
     float: left;
     height: 200px;
     width: 200px;
@@ -280,10 +298,10 @@
     text-align: justify;
     overflow: hidden;
     position: relative;
-    height: 190px;
+    height: auto;
     width: 480px;
     font-weight: bold;
-
+    
 }
 
 #scrollbar5 .viewport span

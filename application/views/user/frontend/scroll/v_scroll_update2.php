@@ -47,18 +47,23 @@
         }
         .background_1 .tombol
         {
-            position: absolute;
+            position: static;
             background-color: rgb(0,102,51);
             margin-top: 215px;
             border-radius: 5px;
             color: rgb(215, 215, 62);
             font-weight: bold;
             border: 1px solid rgb(0,102,51);
-            margin-left: -35px;
+            margin-left: 180px;
+            margin-top: 180px;
             height: 30px;
             width: 50px;
             cursor: pointer;
         }
+/*        .background_1 p.value_hidden
+        {
+            color: red
+        }*/
         .background_2
         {
             height: 30px;
@@ -176,17 +181,43 @@
     <p>Khusus Untuk Anggota Insan Harmoni</p>
 
     <div class="background_1">
+<!--        <p style="position: absolute; color: black; margin-top: 30px; margin-left: 20px;" id="val_hide1">Nama</p>
+        <p style="position: absolute; color: black; margin-top: 70px; margin-left: 20px;" id="val_hide2">Angkatan</p>
+        <p style="position: absolute; color: black; margin-top: 110px; margin-left: 20px;" id="val_hide3">Alamat</p>
+        <p style="position: absolute; color: black; margin-top: 150px; margin-left: 20px;" id="val_hide4">Email/Telp</p>-->
         <form>
-            <input type="text" name="" title="Nama" />
-            <input type="text" name="" title="Angkatan"/>
-            <input type="text" name="" title="Alamat"/>
-            <input type="text" name="" title="Email/Telp"/>
+            <input type="text" name="" id="val1"/> 
+            <input type="text" name="" id="val2"/> 
+            <input type="text" name="" id="val3"/> 
+            <input type="text" name="" id="val4"/> 
 
             <input type="submit" value="kirim" class="tombol" />
         </form>
+        
 
     </div>
-
+    
+<!--    <script>
+        $(document).ready(function(){
+            $("#val1").focus(function(){
+                $("#val_hide1").fadeOut();           
+                $("#val_hide2,#val_hide3,#val_hide4").show();  
+            });
+            $("#val2").focus(function(){
+                $("#val_hide2").fadeOut();           
+                $("#val_hide1,#val_hide3,#val_hide4").show();
+              
+            });
+            $("#val3").focus(function(){
+                $("#val_hide3").fadeOut();           
+                $("#val_hide2,#val_hide1,#val_hide4").show();
+            });
+            $("#val4").focus(function(){
+                $("#val_hide4").fadeOut();           
+                $("#val_hide2,#val_hide3,#val_hide1").show();
+            });
+        });
+    </script>-->
 <!--    <p class="cek">cek dulu sebelum kirim</p>-->
 
 
@@ -199,7 +230,7 @@
     <div class="background_2">
 
     </div>
-    <p style="font-weight: bold;position: absolute; text-align: center; margin: 0px 0px 0px -170px;">pengunjung</p>
+    <p style="font-weight: bold;position: absolute; text-align: center; margin: 0px 0px 0px -135px;">pengunjung</p>
 
 
     <div class="background_4">
@@ -520,7 +551,7 @@
                 margin-top: 5px;
                 cursor:pointer;
             }
-             #img_smiley2 {
+            #img_smiley2 {
                 position: absolute;
                 margin-left: -22px;
                 margin-top: 5px;
@@ -534,42 +565,43 @@
                 margin-top: -355px;
                 margin-left: 195px;
             }
-           
-            
+
+
             .tooltip table
             {
                 margin: 0;
                 padding: 0;
+                
             }
-            
-/*            .tooltip table tbody
-            {
-                margin: 0;
-                padding: 0;
-            }
-            
-            .tooltip table tbody tr
-            {
-                margin: 0;
-                padding: 0;
-            }
-            
-            .tooltip table tbody tr td
-            {
-                margin: 0;
-                padding: 0;
-            }
+
+            /*            .tooltip table tbody
+                        {
+                            margin: 0;
+                            padding: 0;
+                        }
+                        
+                        .tooltip table tbody tr
+                        {
+                            margin: 0;
+                            padding: 0;
+                        }
+                        
+                        .tooltip table tbody tr td
+                        {
+                            margin: 0;
+                            padding: 0;
+                        }
             */
             .tooltip table tbody tr td
             {
                 opacity:0.5;
             }
-            
+
             .tooltip table tbody tr td a img
             {
                 height: 19px;
                 width: 19px;
-                
+
             }
 
         </style>
@@ -582,7 +614,7 @@
 
             <input type="text"/><img src="../smileys/wink.gif" id="img_smiley" /><img src="../smileys/wink.gif" id="img_smiley2" />
             <div class="tooltip"><?php echo $smiley_table; ?></div>
-            
+
 
             <script>
                 $(document).ready(function(){
@@ -599,6 +631,9 @@
                             "display":"none"
                         });
                     });
+                    
+                   
+                    
                     $("#img_smiley2").click(function(){
                         $(".tooltip").fadeOut();
                         $("#img_smiley").css({
@@ -610,9 +645,16 @@
                         $("#img_smiley2").css({
                             "display":"none"
                         });
-                        });
                     });
+                });
                
+            </script>
+            <script>
+                $(document).ready(function(){
+                     $(".tooltip table tbody tr td a img").click(function(){
+                        $(".tooltip").fadeOut();
+                    });
+                });
             </script>
             <script>
                 $(document).ready(function(){
@@ -620,7 +662,7 @@
                         $(this).css({
                             
                             "cursor":"pointer",
-                           "opacity":"1"
+                            "opacity":"1"
                         });
                     });
                     $(".tooltip table tbody tr td").mouseout(function(){

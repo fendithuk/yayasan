@@ -1,9 +1,7 @@
 body
 {
     text-align: center;
-    background:url('../image/bgUtama.jpg');
-    background-repeat: repeat;
-    background-color: #3faa4c;
+    background-color: black;
     font-family: arial;
 }
 
@@ -17,16 +15,21 @@ src: url('font/arial.ttf');
 a
 {
     text-decoration: none;
+    outline: none;
 }
 /*-------------------------page wrap--------------------------------------*/
 .page_wrap
 {
     text-align: left;
-    margin-top: 50px;
+    margin-top: 0px;
     margin-left: auto;
     margin-right: auto;
     width: 950px;
     height: auto;
+    padding: 15px 65px 230px 85px;
+    background:url('../image/bgUtama.jpg');
+    background-repeat: no-repeat;
+    
 }
 
 .shadow
@@ -165,7 +168,7 @@ a
     height: 132px;
     text-align: center;
     margin-left: 8px;
-    
+    outline-color: blue;
 }
 
 .content .contentRight ul.tabs img

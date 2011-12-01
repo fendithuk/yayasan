@@ -4,7 +4,7 @@
         <title><?= $title ?></title>
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/page.css" media="all"/>
         <link rel="stylesheet" href="<?php echo base_url(); ?>scroll/css/website.css" type="text/css" media="all"/>
-        <link rel="stylesheet" href="<?php echo base_url(); ?>css/scroll.css" type="text/css" media="screen"/>
+        <link rel="stylesheet" href="<?php echo base_url(); ?>css/scroll.css" type="text/css" media="all"/>
         <script type="text/javascript" src="<?php echo base_url(); ?>scroll/js/jquery-1.4.2.min.js"></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>js/jquery.tools.min.js"></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>js/page.js"></script>
@@ -25,5 +25,5 @@
     </head>
 
     <body>
-
+        
         <div class="page_wrap"> <!--start page wrap-->
