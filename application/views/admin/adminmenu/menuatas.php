@@ -150,12 +150,12 @@
                     <!-- Navigation Dropdown Menu Item Content: Start -->
                     <ul class="subnav">
                         <li><a href="c_beranda" class="icon home">Beranda</a></li>  
-                        <li><a href="accordion.html" class="icon pages">Profil</a></li>  
-                        <li><a href="tabs.html" class="icon user">Anggota</a></li> 
-                        <li><a href="forms.html" class="icon frames">Peluang</a></li>  
-                        <li><a href="charts.html" class="icon pages">Kegiatan</a></li>  
-                        <li><a href="tables.html" class="icon list">Links</a></li>  
-                        <li><a href="tables.html" class="icon list">Links Gambar</a></li>  
+                        <li><a href="c_profil" class="icon pages">Profil</a></li>  
+                        <li><a href="c_anggota" class="icon user">Anggota</a></li> 
+                        <li><a href="c_peluang" class="icon frames">Peluang</a></li>  
+                        <li><a href="c_kegiatan" class="icon pages">Kegiatan</a></li>  
+                        <li><a href="c_links" class="icon list">Links</a></li>  
+                        <li><a href="c_linksGambar" class="icon list">Links Gambar</a></li>  
                     </ul>  
                     <!-- Navigation Dropdown Menu Item Content: End --> 
                 </li>

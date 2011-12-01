@@ -5,7 +5,7 @@
     <!-- Box Header: Start -->
     <div class="box_top">
 
-        <h2 class="icon pages">List Posting Di Kegiatan<span class="tip" >3</span></h2>
+        <h2 class="icon pages">List Posting Di Anggota<span class="tip" >3</span></h2>
 
         <!-- Tab Select: Start -->
         <ul class="sorting">
@@ -31,10 +31,10 @@
                         <tr>
 
                             <th class="align_left">No</th>
-                            <th class="align_left center">Judul</th>
-                            <th class="align_left center">Tanggal</th>
-                            <th class="align_left center">Gambar</th>
-                            <th class="align_left center">Isi</th>
+                            <th class="align_left center">Nama</th>
+                            <th class="align_left center">Angkatan</th>
+                            <th class="align_left center">Alamat</th>
+                            <th class="align_left center">Email</th>
                             <th class="align_left center tools">Tools</th>
                         </tr>
                     </thead>
@@ -48,7 +48,7 @@
                             <td class="align_left center">3</td>
                             <td class="align_left center">1 hour ago</td>
                             <td class="align_left tools center">
-                                <a href="javascript:void(0);" id="setti-admin" class="edit tip edit-kegiatan" title="edit">edit</a>
+                                <a href="javascript:void(0);" id="setti-admin" class="edit tip edit-anggota" title="edit">edit</a>
 
                                 <a href="#" class="delete tip" title="delete">delete</a>
                             </td>
@@ -62,7 +62,7 @@
                             <td class="align_left center">23</td>
                             <td class="align_left center">5 hours ago</td>
                             <td class="align_left center tools">
-                                <a href="javascript:void(0);" id="setti-admin" class="edit tip edit-kegiatan" title="edit">edit</a>
+                                <a href="javascript:void(0);" id="setti-admin" class="edit tip edit-anggota" title="edit">edit</a>
 
                                 <a href="#" class="delete tip" title="delete">delete</a>
                             </td>
@@ -77,7 +77,7 @@
                             <td class="align_left center">21</td>
                             <td class="align_left center">10 hours ago</td>
                             <td class="align_left tools center">
-                                <a href="javascript:void(0);" id="setti-admin" class="edit tip edit-kegiatan" title="edit">edit</a>
+                                <a href="javascript:void(0);" id="setti-admin" class="edit tip edit-anggota" title="edit">edit</a>
 
                                 <a href="#" class="delete tip" title="delete">delete</a>
                             </td>
@@ -87,20 +87,20 @@
 
 
                     </tbody>
-                    <div class="box_content padding fkegiatan" title="Edit Kegiatan">
+                    <div class="box_content padding fanggota" title="Edit Anggota">
                         <form>
                             <div class="field" >
-                                <label>Judul</label>
+                                <label>Nama</label>
                                 <input type="text" class="big validate">
 
-                                <label>Tanggal</label>
-                                <input type="text" class="date">
+                                <label>Angkatan</label>
+                                <input type="text" class="big validate">
 
-                                <label>Gambar</label>
-                                <input type="file" />
+                                <label>Alamat</label>
+                                <input type="text" class="big validate">
 
-                                <label>Isi</label>
-                                <textarea class="wysiwyg"></textarea>
+                                <label>Email</label>
+                                <input type="text" class="big validate">
 
                             </div>
                             <a href="" class="button" style="float: right;margin-right: 0px;">Simpan</a>
@@ -128,14 +128,14 @@
 <script type="text/javascript">
     $(function() {
         //$("#dialog").css({'display': 'none'});
-        $(".edit-kegiatan").click( function (){
-            $('.fkegiatan').dialog('open');
+        $(".edit-anggota").click( function (){
+            $('.fanggota').dialog('open');
         });
-        $(".fkegiatan").dialog({
+        $(".fanggota").dialog({
             bgiframe: true,
             autoOpen: false,
-            height: 660,
-            width :550,
+            height: 500,
+            width :450,
             modal: true
 			
         });

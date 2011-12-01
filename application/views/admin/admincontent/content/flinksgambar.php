@@ -6,7 +6,7 @@
     <!-- Box Header: Start -->
     <div class="box_top">
 
-        <h2 class="icon frames">TAMBAH ANGGOTA</h2>
+        <h2 class="icon frames">GANTI GAMBAR</h2>
 
     </div>
     <!-- Box Header: End -->
@@ -15,26 +15,30 @@
     <div class="box_content padding">
 
         <form action="">
-            
             <div class="field">
-                <label>Nama </label>
-                <input type="text" class="big validate">
+                <label>Position Gambar</label>
+                <select>
+                    <option>--Pilih Posisi--</option>
+                    <option>--------------------------</option>
+                    <option>Posisi 1</option>
+                    <option>Posisi 2</option>
+                    <option>Posisi 3</option>
+                    <option>Posisi 4</option>
+                    <option>Posisi 5</option>
+
+                </select>
             </div>
             <div class="field">
-                <label>Angkatan</label>
+                <label>Alamat Links</label>
                 <input type="text" class="big validate">
             </div>
+
             <div class="field">
-                <label>Alamat</label>
-                <input type="text" class="big validate">
+                    <label>Gambar</label>
+                    <input type="file" />
             </div>
-            <div class="field">
-                <label>Email</label>
-                <input type="text" class="big validate">
-            </div>
-           
             <!-- WYSIWYG: Start -->	
-           
+
             <!-- WYSIWYG: End -->
 
             <button>Simpan</button>
@@ -42,7 +46,7 @@
     </div>
     <!-- Box Content: End -->
 
-    
+
 </div>
 <!-- 100% Box Grid Container: End -->
 <?php $this->load->view('admin/adminmenu/menubawah'); ?>
