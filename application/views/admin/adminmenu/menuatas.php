@@ -127,7 +127,7 @@
 
             <!-- Navigation: Start -->
             <ul id="navigation" class="dropdown">
-                <li><a class="dashboard active" href="dashboar">Dashboard</a></li>
+                <li><a class="dashboard active" href="<?php echo base_url(); ?>index.php/dashboar">Dashboard</a></li>
 
                 <!-- Navigation Dropdown Menu Item: Start -->
                 <li class="topnav">
@@ -135,8 +135,8 @@
 
                     <!-- Navigation Dropdown Menu Item Content: Start -->
                     <ul class="subnav">
-                        <li><a href="t_content" class="icon typography">Tambah Content</a></li> 
-                        <li><a href="t_anggota" class="icon blocks">Tambah Anggota</a></li>
+                        <li><a href="<?php echo base_url(); ?>index.php/adm/t_content" class="icon typography">Tambah Content</a></li> 
+                        <li><a href="<?php echo base_url(); ?>index.php/adm/t_anggota" class="icon blocks">Tambah Anggota</a></li>
 
                     </ul> 
                     <!-- Navigation Dropdown Menu Item Content: End --> 
@@ -149,20 +149,20 @@
 
                     <!-- Navigation Dropdown Menu Item Content: Start -->
                     <ul class="subnav">
-                        <li><a href="c_beranda" class="icon home">Beranda</a></li>  
-                        <li><a href="c_profil" class="icon pages">Profil</a></li>  
-                        <li><a href="c_anggota" class="icon user">Anggota</a></li> 
-                        <li><a href="c_peluang" class="icon frames">Peluang</a></li>  
-                        <li><a href="c_kegiatan" class="icon pages">Kegiatan</a></li>  
-                        <li><a href="c_links" class="icon list">Links</a></li>  
-                        <li><a href="c_linksGambar" class="icon list">Links Gambar</a></li>  
+                        <li><a href="<?php echo base_url(); ?>index.php/adm/c_beranda" class="icon home">Beranda</a></li>  
+                        <li><a href="<?php echo base_url(); ?>index.php/adm/c_profil" class="icon pages">Profil</a></li>  
+                        <li><a href="<?php echo base_url(); ?>index.php/adm/c_anggota" class="icon user">Anggota</a></li> 
+                        <li><a href="<?php echo base_url(); ?>index.php/adm/c_peluang" class="icon frames">Peluang</a></li>  
+                        <li><a href="<?php echo base_url(); ?>index.php/adm/c_kegiatan" class="icon pages">Kegiatan</a></li>  
+                        <li><a href="<?php echo base_url(); ?>index.php/adm/c_links" class="icon list">Links</a></li>  
+                        <li><a href="<?php echo base_url(); ?>index.php/adm/c_linksGambar" class="icon list">Links Gambar</a></li>  
                     </ul>  
                     <!-- Navigation Dropdown Menu Item Content: End --> 
                 </li>
                 <!-- Navigation Dropdown Menu Item: End -->
 
                 <!-- Navigation Menu Item: Start -->
-                <li><a class="pictures" href="gallery.html">Gallery</a></li>
+                
                 <!-- Navigation Menu Item: End -->
             </ul>
             <!-- Navigation: End -->

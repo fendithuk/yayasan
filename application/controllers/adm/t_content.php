@@ -36,10 +36,12 @@ class T_content extends Ci_controller {
         $isi = $this->input->post('isi');
         $gambar = $this->input->post('file');
         $tanggal = $this->input->post('tanggal');
-        echo "substr($tanggal, 6)-substr($tanggal, 3, 4)-substr($tanggal, 0, 1)";
-        exit;
+        $thn = substr($tanggal, 6);
+        $hr = substr($tanggal, 3, 2);
+        $bln = substr($tanggal, 0, 2);
+
         if ($coba == 1 || $coba == 4) {
-            if ($judul != "" || $isi != "" || $tanggal != "" || $gambar == "") {
+            if ($judul != "" && $isi != "" && $tanggal != "" && $gambar != "") {
                 $config['upload_path'] = 'uploads';
                 $config['allowed_types'] = 'jpg|jpeg|gif|png|JPG';
                 $config['max_size'] = '4000';
@@ -50,11 +52,13 @@ class T_content extends Ci_controller {
                 $this->load->library('upload', $config);
                 $data = $this->upload->do_upload('file');
                 if ($data) {
+                    $file = $this->upload->data();
+                    $namaFile = $file['file_name'];
                     $dataContent = array(
-                        'idcontentdua' => NULL,
+                        'idcontentsatu' => NULL,
                         'judul' => $this->input->post('judul'),
-                        'gambar' => $file['file_name'],
-                        'tanggal' => $tanggal,
+                        'tanggal' => "$thn-$bln-$hr",
+                        'gambar' => $namaFile,
                         'isi' => $this->input->post('isi'),
                         'idkategori' => $coba
                     );
