@@ -17,8 +17,11 @@ class C_anggota extends Ci_controller{
     }
     
     function index(){
+         $cek['cekl'] = "adm";
+        $cek['menu'] = "content";
+        $cek['menu2'] = "anggota";
         $this->load->view('admin/adminheader');
-        $this->load->view('admin/admincontent/content/fanggota');
+        $this->load->view('admin/admincontent/content/fanggota',$cek);
         $this->load->view('admin/adminfooter');
     }
 }

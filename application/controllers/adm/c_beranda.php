@@ -17,8 +17,11 @@ class C_beranda extends Ci_controller{
     }
     
     function index(){
+         $cek['cekl'] = "adm";
+        $cek['menu'] = "content";
+        $cek['menu2'] = "beranda";
         $this->load->view('admin/adminheader');
-        $this->load->view('admin/admincontent/content/fberanda');
+        $this->load->view('admin/admincontent/content/fberanda',$cek);
         $this->load->view('admin/adminfooter');
     }
 }

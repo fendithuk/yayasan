@@ -17,8 +17,11 @@ class c_kegiatan extends Ci_controller {
     }
     
     function index(){
+         $cek['cekl'] = "adm";
+        $cek['menu'] = "content";
+        $cek['menu2'] = "kegiatan";
         $this->load->view('admin/adminheader');
-        $this->load->view('admin/admincontent/content/fkegiatan');
+        $this->load->view('admin/admincontent/content/fkegiatan',$cek);
         $this->load->view('admin/adminfooter');
     }
 }

@@ -17,8 +17,11 @@ class C_peluang extends Ci_controller {
     }
     
     function index(){
+         $cek['cekl'] = "adm";
+        $cek['menu'] = "Content";
+        $cek['menu2'] = "Peluang";
         $this->load->view('admin/adminheader');
-        $this->load->view('admin/admincontent/content/fpeluang');
+        $this->load->view('admin/admincontent/content/fpeluang',$cek);
         $this->load->view('admin/adminfooter');
     }
 }

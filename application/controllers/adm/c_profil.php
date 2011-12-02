@@ -17,8 +17,11 @@ class c_profil extends Ci_controller{
     }
     
     function index(){
+         $cek['cekl'] = "adm";
+        $cek['menu'] = "Content";
+        $cek['menu2'] = "Profil";
         $this->load->view('admin/adminheader');
-        $this->load->view('admin/admincontent/content/fprofil');
+        $this->load->view('admin/admincontent/content/fprofil',$cek);
         $this->load->view('admin/adminfooter');
     }
 }

@@ -175,7 +175,14 @@
 
             <!-- Breadcrumb: Start -->
             <ul class="left">
-                <li class="icon dashboard"><a href="#">Dashboard</a></li>
+                <?php if ($cekl != "adm") { ?>
+                    <li class="icon dashboard"><a href="#">Dashboard</a></li>
+                <?php }else{ ?>
+                    <li class="icon dashboard"><a href="#">Dashboard</a></li>
+                    <li class="icon point_right"><a href="#"><?php echo $menu; ?></a></li>
+                <li class="icon point_right active"><a href="#"><?php echo $menu2; ?></a></li>
+                <?php }
+                ?>
             </ul>
             <!-- Breadcrumb: End -->
 

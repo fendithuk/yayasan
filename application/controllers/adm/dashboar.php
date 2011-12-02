@@ -17,8 +17,10 @@ class dashboar extends CI_Controller{
     }
     
     function index(){
+         $cek['cekl'] = "";
+       
         $this->load->view('admin/adminheader');
-        $this->load->view('admin/admincontent/fdashboar');
+        $this->load->view('admin/admincontent/fdashboar',$cek);
         $this->load->view('admin/adminfooter');
     }
 }

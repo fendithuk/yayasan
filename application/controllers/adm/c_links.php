@@ -17,8 +17,11 @@ class C_links extends Ci_controller {
     }
     
     function index(){
+         $cek['cekl'] = "adm";
+        $cek['menu'] = "content";
+        $cek['menu2'] = "link";
         $this->load->view('admin/adminheader');
-        $this->load->view('admin/admincontent/content/flinks');
+        $this->load->view('admin/admincontent/content/flinks',$cek);
         $this->load->view('admin/adminfooter');
     }
 }

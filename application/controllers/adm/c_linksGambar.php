@@ -17,8 +17,11 @@ class C_linksGambar extends Ci_controller {
     }
     
     function index(){
+         $cek['cekl'] = "adm";
+        $cek['menu'] = "content";
+        $cek['menu2'] = "link gambar";
         $this->load->view('admin/adminheader');
-        $this->load->view('admin/admincontent/content/flinksgambar');
+        $this->load->view('admin/admincontent/content/flinksgambar',$cek);
         $this->load->view('admin/adminfooter');
     }
 }

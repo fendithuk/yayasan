@@ -18,8 +18,11 @@ class T_anggota extends Ci_controller {
     }
     
     function index(){
+        $cek['cekl'] = "adm";
+        $cek['menu'] = "Master";
+        $cek['menu2'] = "Tambah Anggota";
         $this->load->view('admin/adminheader');
-        $this->load->view('admin/admincontent/master/ftambahanggota');
+        $this->load->view('admin/admincontent/master/ftambahanggota',$cek);
         $this->load->view('admin/adminfooter');
     }
 }
