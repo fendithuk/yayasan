@@ -37,7 +37,7 @@
             
             <span><a href="">baca selengkapnya</a></span>
             
-            <ul style="margin: 30px 0px 0px 0px; padding: 0;">
+            <ul style="margin: 25px 0px 0px 0px; padding: 0;">
                 <li style="display: inline-block"><hr style="border: 1px solid rgb(0,102,51); width: 210px; margin-left: -20px;"></li>
                 <li style="display: inline-block; margin-left: 10px; margin-right: 10px"><img src="<?php echo base_url(); ?>image/scrolIco.png" style="height: 30px; width: 30px"/></li>
                 <li style="display: inline-block"><hr style="border: 1px solid rgb(0,102,51); width: 210px;"></li>
