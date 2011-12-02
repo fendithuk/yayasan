@@ -1,15 +1,16 @@
 body
 {
     text-align: center;
-    background-color: black;
+    background:url('../image/bgUtama.jpg');
+    background-repeat: repeat;
     font-family: arial;
 }
 
 @font-face
 {
-font-family: arial;
-src: url('font/arial.ttf');
-    
+    font-family: arial;
+    src: url('font/arial.ttf');
+
 }
 
 a
@@ -27,14 +28,14 @@ a
     width: 950px;
     height: auto;
     padding: 15px 65px 230px 85px;
-    background:url('../image/bgUtama.jpg');
-    background-repeat: no-repeat;
-    
+/*    background:url('../image/bgUtama.jpg');
+    background-repeat: no-repeat;*/
+
 }
 
 .shadow
 {
-    box-shadow: 5px 0px 35px black;
+    box-shadow: 3px 5px 45px black;
     border-radius: 16px;
     margin: 0;
     padding: 0;
@@ -87,8 +88,14 @@ a
     margin: 0;
     float: left;
     height: 660px;
-/*    background: rgb(0,102,51);
-    z-index: -2;*/
+    background-image: url('../image/bgSamping2.png') ;
+    background-repeat: no-repeat;
+    /*    background: rgb(0,102,51);
+        z-index: -2;*/
+    z-index: -1;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    overflow: hidden;
 }
 
 .content .contentLeft ul
@@ -98,6 +105,7 @@ a
     position: absolute;
     margin-left: -20px;
     margin-top: -40px;
+    z-index: 2;
 }
 
 .content .contentLeft ul li
@@ -105,13 +113,14 @@ a
     list-style: none;
     width: auto;
     height: auto;
-    
+
 }
 
 .content .contentLeft ul li img
 {
     height: 100px;
     width: 110px;
+
 }
 
 .content .contentLeft div.a
@@ -120,15 +129,18 @@ a
     margin-right: 10px;
     width: auto;
     height: 900px;
+    overflow: hidden;
+
 }
 
 .content .contentLeft div.a img
 {
-    width: 180px;
+    width: 183px;
     position: absolute;
-    z-index: -1;
+    z-index: 1;
     margin-left: -2px;
-    height: 664px;
+    height: 660px;
+
 }
 
 .content .contentLeft h2
@@ -194,8 +206,8 @@ a
     height: 660px;
     width: 772px;
     margin-top: 0px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .content .contentRight div.panel .panel2
@@ -232,11 +244,11 @@ a
 
 .panel .vertical
 {
-	position:relative;
-	overflow:hidden;	
-	height: 800px;	 
-	width: 900px;
-	border-top:1px solid #ddd;	
+        position:relative;
+        overflow:hidden;	
+        height: 800px;	 
+        width: 900px;
+        border-top:1px solid #ddd;	
 }
 
 .panel .scrollable .items
@@ -247,141 +259,141 @@ a
 }
 
 .panel .scrollable .items .item {
-	border-bottom:1px solid #ddd;
-	margin:0px 0;
-	padding:0px;
-	font-size:12px;
-	height:180px;
+        border-bottom:1px solid #ddd;
+        margin:0px 0;
+        padding:0px;
+        font-size:12px;
+        height:180px;
 }
 
 
 .panel .scrollable .items .item img {
-	float:left;
-	margin-right:20px;
-	height:100px;
-	width:100px;
+        float:left;
+        margin-right:20px;
+        height:100px;
+        width:100px;
 }
 
 .panel .scrollable .items .item h3 {
-	margin:0 0 5px 0;
-	font-size:16px;
-	color:#456;
-	font-weight:normal;
+        margin:0 0 5px 0;
+        font-size:16px;
+        color:#456;
+        font-weight:normal;
 }
 
 -------action above scroll-----------
 #actions {
-	width:900px;
-	
+        width:900px;
+        
 }
 
 #actions a {
-	font-size:11px;		
-	cursor:pointer;
-	color:#666;
+        font-size:11px;		
+        cursor:pointer;
+        color:#666;
 }
 
 #actions a:hover {
-	text-decoration:underline;
-	color:#000;
+        text-decoration:underline;
+        color:#000;
 }
 
 .disabled {
-	visibility:hidden;		
+        visibility:hidden;		
 }
 
 .next {
-	float:right;
+        float:right;
 }	*/
 
 /* root element for scrollable 
 .scrollable {
 
-	 required settings 
-	position:relative;
-	overflow:hidden;
+         required settings 
+        position:relative;
+        overflow:hidden;
 
-	 vertical scrollables have typically larger height than width but not now 
-	height: 665px;
-	width: 700px;
+         vertical scrollables have typically larger height than width but not now 
+        height: 665px;
+        width: 700px;
 }
 
  root element for scrollable items 
 .scrollable .items {
-	position:absolute;
+        position:absolute;
 
-	 this time we have very large space for the height 
-	height:20000em;
+         this time we have very large space for the height 
+        height:20000em;
 }
 
  root element for scrollable 
 .vertical {  
-	
-	 required settings 
-	position:relative;
-	overflow:hidden;	
+        
+         required settings 
+        position:relative;
+        overflow:hidden;	
 
-	 vertical scrollers have typically larger height than width 	
-	height: 665px;	 
-	width: 700px;
-	border-top:1px solid #ddd;	
+         vertical scrollers have typically larger height than width 	
+        height: 665px;	 
+        width: 700px;
+        border-top:1px solid #ddd;	
 }
 
  root element for scrollable items 
 .items {	
-	position:absolute;
-	
-	 this time we have very large space for height 	
-	height:20000em;	
-	margin: 0px;
+        position:absolute;
+        
+         this time we have very large space for height 	
+        height:20000em;	
+        margin: 0px;
 }
 
  single scrollable item 
 .item {
-	border-bottom:1px solid #ddd;
-	margin:10px 0;
-	padding:15px;
-	font-size:12px;
-	height:180px;
+        border-bottom:1px solid #ddd;
+        margin:10px 0;
+        padding:15px;
+        font-size:12px;
+        height:180px;
 }
 
  elements inside single item 
 .item img {
-	float:left;
-	margin-right:20px;
-	height:180px;
-	width:240px;
+        float:left;
+        margin-right:20px;
+        height:180px;
+        width:240px;
 }
 
 .item h3 {
-	margin:0 0 5px 0;
-	font-size:16px;
-	color:#456;
-	font-weight:normal;
+        margin:0 0 5px 0;
+        font-size:16px;
+        color:#456;
+        font-weight:normal;
 }
 
  the action buttons above the scrollable 
 #actions {
-	width:700px;
-	margin:30px 0 10px 0;	
+        width:700px;
+        margin:30px 0 10px 0;	
 }
 
 #actions a {
-	font-size:11px;		
-	cursor:pointer;
-	color:#666;
+        font-size:11px;		
+        cursor:pointer;
+        color:#666;
 }
 
 #actions a:hover {
-	text-decoration:underline;
-	color:#000;
+        text-decoration:underline;
+        color:#000;
 }
 
 .disabled {
-	visibility:hidden;		
+        visibility:hidden;		
 }
 
 .next {
-	float:right;
+        float:right;
 }	*/
 
