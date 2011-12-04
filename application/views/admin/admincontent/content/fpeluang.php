@@ -46,9 +46,10 @@
                                 <td class="align_left"><?php echo $i; ?></td>
                                 <td class="align_left center"><?php echo $r->judul ?></td>
 
-                                <td class="align_left center"><?php echo $r->isi ?></td>
+                                <td class="align_left center"><?php $content = nl2br(htmlentities(strip_tags($r->isi))); echo word_limiter($content , 3); ?></td>
                                 <td class="align_left tools center">
-                                    <a href="javascript:void(0);" id="setti-admin" class="edit tip edit-profil" title="edit">edit</a>
+                            <?php  
+    echo "<a href=\"c_peluang/edit/$r->id\" id=\"setti-admin\" class=\"edit tip\" >edit</a>" ?>
 
                                     <a href="#" class="delete tip" title="delete">delete</a>
                                 </td>
@@ -60,22 +61,7 @@
                         
 
                     </tbody>
-                    <div class="box_content padding fpeluang" title="Edit Peluang">
-                        <form>
-                            <div class="field" >
-                                <label>Judul</label>
-                                <input type="text" class="big validate">
-
-                               
-
-                                <label>Isi</label>
-                                <textarea class="wysiwyg"></textarea>
-
-                            </div>
-                            <a href="" class="button" style="float: right;margin-right: 0px;">Simpan</a>
-                        </form>
-
-                    </div> 
+                
                 </table> 
 
                 <!-- News Sorting Table Actions: Start -->
@@ -94,21 +80,6 @@
     <!-- Box Content: End -->
 
 </div>
-<script type="text/javascript">
-    $(function() {
-        //$("#dialog").css({'display': 'none'});
-        $(".edit-peluang").click( function (){
-            $('.fpeluang').dialog('open');
-        });
-        $(".fpeluang").dialog({
-            bgiframe: true,
-            autoOpen: false,
-            height: 550,
-            width :550,
-            modal: true
-			
-        });
-    });
-</script>
+
 <!-- 100% Box Grid Container: End -->
 <?php $this->load->view('admin/adminmenu/menubawah'); ?>

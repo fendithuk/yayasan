@@ -17,6 +17,7 @@ class C_anggota extends Ci_controller {
         parent::__construct();
         $this->load->model('model_anggota');
         $this->load->library('form_validation');
+        $this->load->helper('text');
     }
 
     function index() {

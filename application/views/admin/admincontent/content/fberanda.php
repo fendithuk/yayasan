@@ -49,15 +49,16 @@
 					
 				</a>
                                 <td class="align_left center"><?php echo $r->judulsketsa; ?></td>
-                                <td class="align_left center"><?php echo $r->tanggalsketsa; ?></td>
+                                <?php  $tgl = substr($r->tanggalsketsa, 8);
+            $bln = substr($r->tanggalsketsa, 5,2);
+            $th = substr($r->tanggalsketsa, 0,4);?>
+                                <td class="align_left center"><?php echo "$tgl/$bln/$th" ?></td>
                                 <td class="align_left center"><a href="<?php echo base_url();?>uploads/<?php echo $r->gambarsketsa; ?>" class="popup"><?php echo $r->gambarsketsa; ?></a></td>
-                                <td class="align_left center"><?php echo $r->isisketsa; ?></td>
+                                <td class="align_left center"><?php $content = nl2br(htmlentities(strip_tags($r->isisketsa))); echo word_limiter($content , 3); ?></td>
                                 <td class="align_left tools center">
                                    
-     <?php  $tgl = substr($r->tanggalsketsa, 8);
-            $bln = substr($r->tanggalsketsa, 5,2);
-            $th = substr($r->tanggalsketsa, 0,4);
-    echo "<a href=\"#\" id=\"setti-admin\" class=\"edit tip edit-beranda\" judul=\"$r->judulsketsa\" tanggal=\"$bln/$tgl/$th\" isi=\"$r->isisketsa\" >edit</a>" ?>
+     <?php  
+    echo "<a href=\"c_beranda/edit/$r->idsketsa\" id=\"setti-admin\" class=\"edit tip\" >edit</a>" ?>
 
                                     <a href="#" class="delete tip" title="delete">delete</a>
                                 </td>
@@ -66,29 +67,7 @@
 <?php } ?>
 
                     </tbody>
-                    <div class="box_content padding fberanda" title="Edit Sketsa">
-                        <form name="ok">
-                           
-                            <div class="field" >
-                            
-                                <label>Judul</label>
-<!--                                <input type="text"  class="big validate" name="judulp" id="judulp">-->
-<?php echo form_input('judul', '', 'id="judul"', 'class="big validate"') ?>
-
-                                <label>Tanggal</label>
-                                <input type="text" name="tanggal" id="tanggal"class="date">
-
-                                <label>Gambar</label>
-                                <input type="file" />
-
-                                <label>Isi</label>
-                                <textarea class="wysiwyg" name="isi" id="isi"><p id="ii" name="ii"></p></textarea>
-
-                            </div>
-                            <a href="" class="button" style="float: right;margin-right: 0px;">Simpan</a>
-                        </form>
-
-                    </div> 
+                   
                 </table> 
 
                 <!-- News Sorting Table Actions: Start -->
@@ -107,30 +86,6 @@
     <!-- Box Content: End -->
 
 </div>
-<script type="text/javascript">
-    $(function() {
-        //$("#dialog").css({'display': 'none'});
-        $(".edit-beranda").click( function (){
-            $('.fberanda').dialog('open');
-            var judul = $(this).attr("judul");
-            var tanggal = $(this).attr("tanggal");
-            var is = $(this).attr("isi");
-            
-            
-            $('#judul').val(judul);
-            $('#tanggal').val(tanggal);
-            $('#isi').val(is)
-            
-        });
-        $(".fberanda").dialog({
-            bgiframe: true,
-            autoOpen: false,
-            height: 660,
-            width :550,
-            modal: true
-			
-        });
-    });
-</script>
+
 <!-- 100% Box Grid Container: End -->
 <?php $this->load->view('admin/adminmenu/menubawah'); ?>
