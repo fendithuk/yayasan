@@ -27,7 +27,7 @@
 
         .background_1
         {
-            background-color: limegreen;
+            background-color: #33cc00;
             width: 200px;
             border-radius: 20px;
             padding: 10px;
@@ -41,7 +41,7 @@
         .background_1 form input
         {
             border: 1px solid black;
-            background-color: lime;
+            background-color: #18e600;
             height: 35px;
             margin-bottom: 5px;
             color: white;
@@ -79,7 +79,7 @@
         .background_3
         {
             height: 300px;
-            background-color: lime;
+            background-color: #18e600;
             border-radius: 20px;
 
         }
@@ -99,7 +99,7 @@
             margin-top: -468px;
             margin-left: 260px;
             border-radius: 20px;
-            background-color: limegreen
+            background-color: #33cc00;
         }
         .background_4 form
         {
