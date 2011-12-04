@@ -185,25 +185,19 @@
     <div class="background_1">
 
         <form>
-            <input type="text" name="" value="Nama" onclick="hideValue()" id="nama"/> 
-            <input type="text" name="" value="Angkatan"/> 
-            <input type="text" name="" value="Alamat"/> 
-            <input type="text" name="" value="Email/Telp"/> 
-
+            <input name="" type="text" value="Nama" onfocus="this.value=(this.value=='Nama') ? '' : this.value;" onblur="this.value=(this.value=='') ? 'Nama' : this.value;"/>
+            <input name="" type="text" value="Angkatan" onfocus="this.value=(this.value=='Angkatan') ? '' : this.value;" onblur="this.value=(this.value=='') ? 'Angkatan' : this.value;"/>
+            <input name="" type="text" value="Alamat" onfocus="this.value=(this.value=='Alamat') ? '' : this.value;" onblur="this.value=(this.value=='') ? 'Alamat' : this.value;"/>
+            <input name="" type="text" value="Email/Telp" onfocus="this.value=(this.value=='Email/Telp') ? '' : this.value;" onblur="this.value=(this.value=='') ? 'Email/Telp' : this.value;"/>
+           
             <input type="submit" value="kirim" class="tombol"  />
         </form>
 
 
     </div>
-<!--    <script>
-        function hideValue(){
-            var x= document.getElementById("nama").value;
-            alert(x)
-        }
-        
-    </script>
--->
 
+       
+   
     <div class="captca">
 
     </div>
@@ -586,7 +580,7 @@
                 width: 19px;
 
             }
-            
+
             .areatext
             {
                 margin: 0;
@@ -598,13 +592,13 @@
             }
 
         </style>
-        
+
         <form>
             <label>nama</label>
             <input type="text"/>
             <br/>
             <label>pesan</label>
-            
+
             <textarea class="areatext">
                 
             </textarea><img src="../smileys/wink.gif" id="img_smiley" /><img src="../smileys/wink.gif" id="img_smiley2" />
