@@ -27,7 +27,7 @@
 
         .background_1
         {
-            background-color: limegreen;
+            background-color: #33cc00;
             width: 200px;
             border-radius: 20px;
             padding: 10px;
@@ -41,7 +41,7 @@
         .background_1 form input
         {
             border: 1px solid black;
-            background-color: lime;
+            background-color: #18e600;
             height: 35px;
             margin-bottom: 5px;
             color: white;
@@ -79,7 +79,7 @@
         .background_3
         {
             height: 300px;
-            background-color: lime;
+            background-color: #18e600;
             border-radius: 20px;
 
         }
@@ -99,7 +99,7 @@
             margin-top: -468px;
             margin-left: 260px;
             border-radius: 20px;
-            background-color: limegreen
+            background-color: #33cc00;
         }
         .background_4 form
         {
@@ -185,25 +185,19 @@
     <div class="background_1">
 
         <form>
-            <input type="text" name="" value="Nama" onclick="hideValue()" id="nama"/> 
-            <input type="text" name="" value="Angkatan"/> 
-            <input type="text" name="" value="Alamat"/> 
-            <input type="text" name="" value="Email/Telp"/> 
-
+            <input name="" type="text" value="Nama" onfocus="this.value=(this.value=='Nama') ? '' : this.value;" onblur="this.value=(this.value=='') ? 'Nama' : this.value;"/>
+            <input name="" type="text" value="Angkatan" onfocus="this.value=(this.value=='Angkatan') ? '' : this.value;" onblur="this.value=(this.value=='') ? 'Angkatan' : this.value;"/>
+            <input name="" type="text" value="Alamat" onfocus="this.value=(this.value=='Alamat') ? '' : this.value;" onblur="this.value=(this.value=='') ? 'Alamat' : this.value;"/>
+            <input name="" type="text" value="Email/Telp" onfocus="this.value=(this.value=='Email/Telp') ? '' : this.value;" onblur="this.value=(this.value=='') ? 'Email/Telp' : this.value;"/>
+           
             <input type="submit" value="kirim" class="tombol"  />
         </form>
 
 
     </div>
-<!--    <script>
-        function hideValue(){
-            var x= document.getElementById("nama").value;
-            alert(x)
-        }
-        
-    </script>
--->
 
+       
+   
     <div class="captca">
 
     </div>
@@ -586,7 +580,7 @@
                 width: 19px;
 
             }
-            
+
             .areatext
             {
                 margin: 0;
@@ -598,13 +592,13 @@
             }
 
         </style>
-        
+
         <form>
             <label>nama</label>
             <input type="text"/>
             <br/>
             <label>pesan</label>
-            
+
             <textarea class="areatext">
                 
             </textarea><img src="../smileys/wink.gif" id="img_smiley" /><img src="../smileys/wink.gif" id="img_smiley2" />
