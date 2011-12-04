@@ -44,6 +44,8 @@
             background-color: lime;
             height: 35px;
             margin-bottom: 5px;
+            color: white;
+            padding: 0;
         }
         .background_1 .tombol
         {
@@ -60,10 +62,10 @@
             width: 50px;
             cursor: pointer;
         }
-/*        .background_1 p.value_hidden
-        {
-            color: red
-        }*/
+        /*        .background_1 p.value_hidden
+                {
+                    color: red
+                }*/
         .background_2
         {
             height: 30px;
@@ -181,45 +183,26 @@
     <p>Khusus Untuk Anggota Insan Harmoni</p>
 
     <div class="background_1">
-<!--        <p style="position: absolute; color: black; margin-top: 30px; margin-left: 20px;" id="val_hide1">Nama</p>
-        <p style="position: absolute; color: black; margin-top: 70px; margin-left: 20px;" id="val_hide2">Angkatan</p>
-        <p style="position: absolute; color: black; margin-top: 110px; margin-left: 20px;" id="val_hide3">Alamat</p>
-        <p style="position: absolute; color: black; margin-top: 150px; margin-left: 20px;" id="val_hide4">Email/Telp</p>-->
-        <form>
-            <input type="text" name="" id="val1"/> 
-            <input type="text" name="" id="val2"/> 
-            <input type="text" name="" id="val3"/> 
-            <input type="text" name="" id="val4"/> 
 
-            <input type="submit" value="kirim" class="tombol" />
+        <form>
+            <input type="text" name="" value="Nama" onclick="hideValue()" id="nama"/> 
+            <input type="text" name="" value="Angkatan"/> 
+            <input type="text" name="" value="Alamat"/> 
+            <input type="text" name="" value="Email/Telp"/> 
+
+            <input type="submit" value="kirim" class="tombol"  />
         </form>
-        
+
 
     </div>
-    
 <!--    <script>
-        $(document).ready(function(){
-            $("#val1").focus(function(){
-                $("#val_hide1").fadeOut();           
-                $("#val_hide2,#val_hide3,#val_hide4").show();  
-            });
-            $("#val2").focus(function(){
-                $("#val_hide2").fadeOut();           
-                $("#val_hide1,#val_hide3,#val_hide4").show();
-              
-            });
-            $("#val3").focus(function(){
-                $("#val_hide3").fadeOut();           
-                $("#val_hide2,#val_hide1,#val_hide4").show();
-            });
-            $("#val4").focus(function(){
-                $("#val_hide4").fadeOut();           
-                $("#val_hide2,#val_hide3,#val_hide1").show();
-            });
-        });
-    </script>-->
-<!--    <p class="cek">cek dulu sebelum kirim</p>-->
-
+        function hideValue(){
+            var x= document.getElementById("nama").value;
+            alert(x)
+        }
+        
+    </script>
+-->
 
     <div class="captca">
 
@@ -571,7 +554,7 @@
             {
                 margin: 0;
                 padding: 0;
-                
+
             }
 
             /*            .tooltip table tbody
@@ -603,16 +586,28 @@
                 width: 19px;
 
             }
+            
+            .areatext
+            {
+                margin: 0;
+                padding: 0;
+                max-width: 150px;
+                max-height: 100px;
+                border-radius: 10px;
+                position: static;
+            }
 
         </style>
-
+        
         <form>
             <label>nama</label>
             <input type="text"/>
             <br/>
             <label>pesan</label>
-
-            <input type="text"/><img src="../smileys/wink.gif" id="img_smiley" /><img src="../smileys/wink.gif" id="img_smiley2" />
+            
+            <textarea class="areatext">
+                
+            </textarea><img src="../smileys/wink.gif" id="img_smiley" /><img src="../smileys/wink.gif" id="img_smiley2" />
             <div class="tooltip"><?php echo $smiley_table; ?></div>
 
 
@@ -651,7 +646,7 @@
             </script>
             <script>
                 $(document).ready(function(){
-                     $(".tooltip table tbody tr td a img").click(function(){
+                    $(".tooltip table tbody tr td a img").click(function(){
                         $(".tooltip").fadeOut();
                     });
                 });

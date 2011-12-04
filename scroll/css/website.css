@@ -172,8 +172,11 @@
 }
 #scrollbar3 .viewport table thead tr td
 {
-    
-    border: 1px solid rgb(0,102,51);    
+
+    border: 1px solid rgb(0,102,51);   
+    word-wrap:break-word;
+    max-width: 60px;
+    text-align: center
 }
 
 #scrollbar3 .viewport table tbody tr
@@ -183,8 +186,11 @@
 }
 #scrollbar3 .viewport table tbody tr td
 {
-    
-    border: 1px solid rgb(0,102,51);    
+
+    border: 1px solid rgb(0,102,51);  
+    word-wrap:break-word;
+    max-width: 60px;
+    text-align: center
 }
 
 #scrollbar3 .viewport select
@@ -204,14 +210,14 @@
 #scrollbar3 .viewport select option
 {
     color: black;
-    
+
 }
 #scrollbar3 .viewport hr
 {
     border: 1px solid rgb(0,102,51);
     overflow: hidden;
     position: relative;
-    
+
 }
 /*----------------scrollbar 4--------------------------------------*/
 
@@ -287,7 +293,7 @@
 #scrollbar5 .viewport img
 {
 
-    
+
     float: left;
     height: 200px;
     width: 200px;
@@ -303,7 +309,7 @@
     height: auto;
     width: 480px;
     font-weight: bold;
-    
+
 }
 
 #scrollbar5 .viewport span
@@ -339,7 +345,7 @@
     border: 1px solid rgb(0,102,51);
     overflow: hidden;
     position: relative;
-    
+
 }
 
 
