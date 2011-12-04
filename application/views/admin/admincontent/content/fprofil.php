@@ -32,55 +32,28 @@
 
                             <th class="align_left">No</th>
                             <th class="align_left center">Judul</th>
-                           
+
                             <th class="align_left center">Isi</th>
                             <th class="align_left center tools">Tools</th>
                         </tr>
                     </thead>
                     <tbody>
+                        <?php $i = 0;
+                        foreach ($profil as $r) { $i++;?>
+                            <tr>
 
-                        <tr>
+                                <td class="align_left"><?php echo $i; ?></td>
+                                <td class="align_left center"><?php echo $r->judul ?></td>
 
-                            <td class="align_left"><a href="#">Some technical issues</a></td>
-                            <td class="align_left center"><a href="#messages" class="popup">Kasper</a></td>
-                           
-                            <td class="align_left center">1 hour ago</td>
-                            <td class="align_left tools center">
-                                <a href="javascript:void(0);" id="setti-admin" class="edit tip edit-profil" title="edit">edit</a>
+                                <td class="align_left center"><?php echo $r->isi ?></td>
+                                <td class="align_left tools center">
+                                    <a href="javascript:void(0);" id="setti-admin" class="edit tip edit-profil" title="edit">edit</a>
 
-                                <a href="#" class="delete tip" title="delete">delete</a>
-                            </td>
-                        </tr>
+                                    <a href="#" class="delete tip" title="delete">delete</a>
+                                </td>
+                            </tr>
 
-                        <tr>
-
-                            <td class="align_left"><a href="#">The new ipad is out!</a></td>
-                            <td class="align_left center"><a href="#messages" class="popup">Kasper</a></td>
-                            
-                            <td class="align_left center">5 hours ago</td>
-                            <td class="align_left center tools">
-                                <a href="javascript:void(0);" id="setti-admin" class="edit tip edit-profil" title="edit">edit</a>
-
-                                <a href="#" class="delete tip" title="delete">delete</a>
-                            </td>
-
-                        </tr>
-
-                        <tr>
-
-                            <td class="align_left"><a href="#">Something just happend!</a></td>
-                            <td class="align_left center"><a href="#messages" class="popup">Dannie</a></td>
-                           
-                            <td class="align_left center">10 hours ago</td>
-                            <td class="align_left tools center">
-                                <a href="javascript:void(0);" id="setti-admin" class="edit tip edit-profil" title="edit">edit</a>
-
-                                <a href="#" class="delete tip" title="delete">delete</a>
-                            </td>
-
-                        </tr>
-
-
+                            <?php } ?>
 
                     </tbody>
                     <div class="box_content padding fprofil" title="Edit Profil">
@@ -89,7 +62,7 @@
                                 <label>Judul</label>
                                 <input type="text" class="big validate">
 
-                               
+
 
                                 <label>Isi</label>
                                 <textarea class="wysiwyg"></textarea>

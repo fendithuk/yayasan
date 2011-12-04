@@ -25,6 +25,39 @@ class model_content extends Ci_Model {
         $insert = $this->db->insert('contentsatu', $data);
         return $insert;
     }
+    
+    function getContentSatu($id){
+        $this->db->select('contentsatu.idcontentsatu as idsketsa,contentsatu.judul as judulsketsa, contentsatu.tanggal as tanggalsketsa,contentsatu.gambar as gambarsketsa, contentsatu.isi as isisketsa');
+        $this->db->from('contentsatu');
+        $this->db->join('kategori','kategori.idkategori = contentsatu.idkategori');
+        $this->db->where('kategori.idkategori',$id);
+     
+        
+        $query = $this->db->get();
+        if($query->num_rows()>0){
+            return $query->result();
+        }else{
+            return NULL;
+        }
+        
+    }
+    
+    function getContentDua($id){
+        $this->db->select('contentdua.idcontentdua as id,contentdua.judul as judul, contentdua.isi as isi');
+        $this->db->from('contentdua');
+        $this->db->join('kategori','kategori.idkategori = contentdua.idkategori');
+        $this->db->where('kategori.idkategori',$id);
+     
+        
+        $query = $this->db->get();
+        if($query->num_rows()>0){
+            return $query->result();
+        }else{
+            return NULL;
+        }
+        
+    }
+    
 }
 
 ?>

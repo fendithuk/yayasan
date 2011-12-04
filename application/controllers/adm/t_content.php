@@ -130,6 +130,8 @@ class T_content extends Ci_controller {
         $this->load->view('admin/admincontent/master/ftambahcontent', $cek);
         $this->load->view('admin/adminfooter');
     }
+    
+    
 
 }
 
