@@ -1,7 +1,15 @@
 <?php $this->load->view('admin/adminmenu/menuatas'); ?>
 <!-- Box Content: Start -->
 <div class="grid_24">
-
+<?php if($msg == "gagal"){?>
+    <div class="notice warning">
+        <p><b>PERHATIAN:</b> Ada field yang masih kosong, silahkan lengkapi field yang ada.</p>
+    </div>
+    <?php }else if ($msg == "success") { ?>
+        <div class="notice success">
+            <p><b>Success:</b> Data berhasil diedit.</p>
+        </div>
+    <?php } ?>
     <!-- Box Header: Start -->
     <div class="box_top">
 
@@ -35,75 +43,87 @@
                             <th class="align_left center">Angkatan</th>
                             <th class="align_left center">Alamat</th>
                             <th class="align_left center">Email</th>
+                            <th class="align_left center">Konfirmasi</th>
                             <th class="align_left center tools">Tools</th>
                         </tr>
                     </thead>
                     <tbody>
-
+                        <?php $i=0;
+foreach ($anggota as $r) {
+    $i++;?>
+                        
                         <tr>
 
-                            <td class="align_left"><a href="#">Some technical issues</a></td>
-                            <td class="align_left center"><a href="#messages" class="popup">Kasper</a></td>
-                            <td class="align_left center">12</td>
-                            <td class="align_left center">3</td>
-                            <td class="align_left center">1 hour ago</td>
+                            <td class="align_left"><?php echo $i;?></td>
+                            <td class="align_left center"><?php echo $r->nama;?></td>
+                            <td class="align_left center"><?php echo $r->thnangkatan;?></td>
+                            <td class="align_left center"><?php echo $r->alamat;?></td>
+                            <td class="align_left center"><?php echo $r->email;?></td>
+                            <?php if($r->status == "ok"){ ?>
+                                 <td class="align_left center">Sudah Dikonfirmasi</td>
+                           
+
+                          <?php }else{ ?>
+                               <td class="align_left center"><a href="javascript:void(0);" class="confirm-anggota" idangkat="<?php echo $r->iddataangkatan;?>">Konfirmasi<?php echo $r->iddataangkatan;?></a></td>
+                               
+                          <?php }
+?>
+                            
                             <td class="align_left tools center">
-                                <a href="javascript:void(0);" id="setti-admin" class="edit tip edit-anggota" title="edit">edit</a>
+                                <a href="javascript:void(0);" id="setti-admin" class="edit tip edit-anggota" idangkatan="<?php echo $r->iddataangkatan;?>" nama="<?php echo $r->nama;?>" angkatan="<?php echo $r->thnangkatan;?>" alamat="<?php echo $r->alamat;?>" email="<?php echo $r->email;?>" title="edit">edit</a>
 
-                                <a href="#" class="delete tip" title="delete">delete</a>
+                                <a href="javascript:void(0);" class="delete tip hapus-anggota" idangka="<?php echo $r->iddataangkatan;?>" title="delete">delete</a>
                             </td>
                         </tr>
+                        
+                        
+                        <?php
+}?>
+                        
 
-                        <tr>
-
-                            <td class="align_left"><a href="#">The new ipad is out!</a></td>
-                            <td class="align_left center"><a href="#messages" class="popup">Kasper</a></td>
-                            <td class="align_left center">67</td>
-                            <td class="align_left center">23</td>
-                            <td class="align_left center">5 hours ago</td>
-                            <td class="align_left center tools">
-                                <a href="javascript:void(0);" id="setti-admin" class="edit tip edit-anggota" title="edit">edit</a>
-
-                                <a href="#" class="delete tip" title="delete">delete</a>
-                            </td>
-
-                        </tr>
-
-                        <tr>
-
-                            <td class="align_left"><a href="#">Something just happend!</a></td>
-                            <td class="align_left center"><a href="#messages" class="popup">Dannie</a></td>
-                            <td class="align_left center">145</td>
-                            <td class="align_left center">21</td>
-                            <td class="align_left center">10 hours ago</td>
-                            <td class="align_left tools center">
-                                <a href="javascript:void(0);" id="setti-admin" class="edit tip edit-anggota" title="edit">edit</a>
-
-                                <a href="#" class="delete tip" title="delete">delete</a>
-                            </td>
-
-                        </tr>
-
-
+                       
 
                     </tbody>
                     <div class="box_content padding fanggota" title="Edit Anggota">
-                        <form>
+                        <?php echo form_open(base_url().'index.php/adm/c_anggota/edit'); ?>
                             <div class="field" >
                                 <label>Nama</label>
-                                <input type="text" class="big validate">
+                                <input type="hidden" name="idangkatan" id="idangkatan" class="big validate" >
+                                <input type="text" name="nama" id="nama" class="big validate">
 
                                 <label>Angkatan</label>
-                                <input type="text" class="big validate">
+                                <input type="text" name="angkatan" id="angkatan" id=""class="big validate">
 
                                 <label>Alamat</label>
-                                <input type="text" class="big validate">
+                                <input type="text" name="alamat" id="alamat" class="big validate">
 
                                 <label>Email</label>
-                                <input type="text" class="big validate">
+                                <input type="text" name="email" id="email" class="big validate">
 
                             </div>
-                            <a href="" class="button" style="float: right;margin-right: 0px;">Simpan</a>
+                            <input type="submit" value="Simpan"/>
+                        </form>
+
+                    </div> 
+                    <div class="box_content padding fconfirm" title="Konfirmasi Anggota">
+                        <?php echo form_open(base_url().'index.php/adm/c_anggota/confirm'); ?>
+                            <div class="field" >
+                                <p>Apa anda yakin konfirmasi data anggota ini?</p>
+                                <input type="hidden" name="idangkat" id="idangkat" class="big validate" >
+                                
+                            </div>
+                            <input type="submit" value="Konfirmasi"/>
+                        </form>
+
+                    </div> 
+                    <div class="box_content padding fhapus" title="Konfirmasi Anggota">
+                        <?php echo form_open(base_url().'index.php/adm/c_anggota/hapus'); ?>
+                            <div class="field" >
+                                <p>Apa anda yakin ingin menghapus data anggota ini?</p>
+                                <input type="hidden" name="idangka" id="idangka" class="big validate" >
+                                
+                            </div>
+                            <input type="submit" value="Hapus"/>
                         </form>
 
                     </div> 
@@ -130,12 +150,65 @@
         //$("#dialog").css({'display': 'none'});
         $(".edit-anggota").click( function (){
             $('.fanggota').dialog('open');
+            var id = $(this).attr("idangkatan");
+            var nama = $(this).attr("nama");
+            var angkatan = $(this).attr("angkatan");
+            var alamat = $(this).attr("alamat");
+            var email = $(this).attr("email");
+            
+            $('#nama').val(nama);
+            $('#angkatan').val(angkatan);
+            $('#alamat').val(alamat);
+            $('#email').val(email);
+            $('#idangkatan').val(id);
         });
         $(".fanggota").dialog({
             bgiframe: true,
             autoOpen: false,
             height: 500,
             width :450,
+            modal: true
+			
+        });
+    });
+</script>
+
+<script type="text/javascript">
+    $(function() {
+        //$("#dialog").css({'display': 'none'});
+        $(".confirm-anggota").click( function (){
+            $('.fconfirm').dialog('open');
+            var id = $(this).attr("idangkat");
+        
+           
+            $('#idangkat').val(id);
+        });
+        $(".fconfirm").dialog({
+            bgiframe: true,
+            autoOpen: false,
+            height: 230,
+            width :350,
+            modal: true
+			
+        });
+    });
+</script>
+
+<script type="text/javascript">
+    $(function() {
+        //$("#dialog").css({'display': 'none'});
+        $(".hapus-anggota").click( function (){
+            $('.fhapus').dialog('open');
+            var id = $(this).attr("idangka");
+        
+           
+            $('#idangka').val(id);
+        });
+        $(".fhapus").dialog({
+            bgiframe: true,
+            autoOpen: false,
+            height: 230,
+            width :350,
             modal: true
 			
         });

@@ -68,6 +68,8 @@ class T_anggota extends Ci_controller {
         $this->load->view('admin/adminfooter');
     }
 
+    
+
 }
 
 ?>
