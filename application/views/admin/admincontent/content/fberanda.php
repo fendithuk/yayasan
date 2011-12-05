@@ -1,7 +1,16 @@
 <?php $this->load->view('admin/adminmenu/menuatas'); ?>
 <!-- Box Content: Start -->
 <div class="grid_24">
-
+    <?php if ($msg == "success") { ?>
+        <div class="notice success">
+            <p><b>Success:</b> Data berhasil diedit.</p>
+        </div>
+    <?php } else if($msg == "successDel") { ?>
+         <div class="notice success">
+            <p><b>Success:</b> Data berhasil di hapus.</p>
+        </div>
+    <?php }
+?>
     <!-- Box Header: Start -->
     <div class="box_top">
 
@@ -39,35 +48,52 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php $i = 0;
+                        <?php
+                        $i = 0;
+                        if(isset ($beranda)){
                         foreach ($beranda as $r) {
-                            $i++; ?>
+                            $i++;
+                            ?>
                             <tr>
 
                                 <td class="align_left"><?php echo $i ?></td>
-                                 <a href="<?php echo base_url();?>img/gallery/image_09.jpg" class="popup">
-					
-				</a>
-                                <td class="align_left center"><?php echo $r->judulsketsa; ?></td>
-                                <?php  $tgl = substr($r->tanggalsketsa, 8);
-            $bln = substr($r->tanggalsketsa, 5,2);
-            $th = substr($r->tanggalsketsa, 0,4);?>
-                                <td class="align_left center"><?php echo "$tgl/$bln/$th" ?></td>
-                                <td class="align_left center"><a href="<?php echo base_url();?>uploads/<?php echo $r->gambarsketsa; ?>" class="popup"><?php echo $r->gambarsketsa; ?></a></td>
-                                <td class="align_left center"><?php $content = nl2br(htmlentities(strip_tags($r->isisketsa))); echo word_limiter($content , 3); ?></td>
-                                <td class="align_left tools center">
-                                   
-     <?php  
-    echo "<a href=\"c_beranda/edit/$r->idsketsa\" id=\"setti-admin\" class=\"edit tip\" >edit</a>" ?>
+                        <a href="<?php echo base_url(); ?>img/gallery/image_09.jpg" class="popup">
 
-                                    <a href="#" class="delete tip" title="delete">delete</a>
-                                </td>
-                            </tr> 
+                        </a>
+                        <td class="align_left center"><?php echo $r->judulsketsa; ?></td>
+                        <?php
+                        $tgl = substr($r->tanggalsketsa, 8);
+                        $bln = substr($r->tanggalsketsa, 5, 2);
+                        $th = substr($r->tanggalsketsa, 0, 4);
+                        ?>
+                        <td class="align_left center"><?php echo "$tgl/$bln/$th" ?></td>
+                        <td class="align_left center"><a href="<?php echo base_url(); ?>uploads/<?php echo $r->gambarsketsa; ?>" class="popup"><?php echo $r->gambarsketsa; ?></a></td>
+                        <td class="align_left center"><?php $content = nl2br(htmlentities(strip_tags($r->isisketsa)));
+                        echo word_limiter($content, 3); ?></td>
+                        <td class="align_left tools center">
 
-<?php } ?>
+
+                            <a href="<?php echo base_url(); ?>index.php/adm/c_beranda/edit/<?php echo $r->idsketsa ?>" id="setti-admin" class="edit tip" >edit</a>
+
+                           <a href="javascript:void(0);" class="delete tip hapus-beranda" idan="<?php echo $r->idsketsa;?>" title="delete">delete</a>
+                            </td>
+                        </tr> 
+
+<?php } } ?>
 
                     </tbody>
-                   
+                     <div class="box_content padding fhapus" title="Konfirmasi Anggota">
+                        <?php echo form_open(base_url().'index.php/adm/c_beranda/hapus'); ?>
+                            <div class="field" >
+                                <p>Apa anda yakin ingin menghapus data ini?</p>
+                                <input type="hidden" name="idan" id="idan" class="big validate" >
+                                
+                            </div>
+                            <input type="submit" value="Hapus"/>
+                        </form>
+
+                    </div> 
+
                 </table> 
 
                 <!-- News Sorting Table Actions: Start -->
@@ -86,6 +112,25 @@
     <!-- Box Content: End -->
 
 </div>
-
+<script type="text/javascript">
+    $(function() {
+        //$("#dialog").css({'display': 'none'});
+        $(".hapus-beranda").click( function (){
+            $('.fhapus').dialog('open');
+            var id = $(this).attr("idan");
+        
+           
+            $('#idan').val(id);
+        });
+        $(".fhapus").dialog({
+            bgiframe: true,
+            autoOpen: false,
+            height: 230,
+            width :350,
+            modal: true
+			
+        });
+    });
+</script>
 <!-- 100% Box Grid Container: End -->
 <?php $this->load->view('admin/adminmenu/menubawah'); ?>

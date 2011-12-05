@@ -29,10 +29,12 @@
 
         <!--        <form action="<?php //echo base_url();   ?>index.php/adm/t_content/add" method="POST">-->
             <?php $attributes = array('name' => 'con', 'id' => 'con');
-            echo form_open_multipart(base_url() . 'index.php/adm/t_content/add', $attributes); ?>
+            echo form_open_multipart(base_url() . 'index.php/adm/c_beranda/editSimpan', $attributes); ?>
 
             <div class="field">
                 <label>Content</label>
+                     <input type="hidden" name="idc" value="<?php echo $r->idsketsa; ?>" class="big validate" readonly="true">
+         
                 <input type="text" name="content" value="<?php echo $r->nama; ?>" class="big validate" readonly="true">
             </div>
 
@@ -50,7 +52,7 @@
                 $th = substr($r->tanggalsketsa, 0, 4);
                 ?>
                 <label class="left">Tanggal</label>
-                <input type="text" name="tanggal" value="<?php echo "$tgl/$bln/$th"?>"class="date" >
+                <input type="text" name="tanggal" value="<?php echo "$bln/$tgl/$th"?>"class="date" >
             </div>
 
 

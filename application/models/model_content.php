@@ -112,6 +112,32 @@ class model_content extends Ci_Model {
             return NULL;
         }
     }
+    
+    function editContentSatu($data,$idk,$idc){
+        $this->db->where('idkategori', $idk);
+        $this->db->where('idcontentsatu',$idc);
+        $update = $this->db->update('contentsatu', $data);
+        return $update;
+    }
+    
+    function editContentDua($data,$idk,$idc){
+        $this->db->where('idkategori', $idk);
+        $this->db->where('idcontentdua',$idc);
+        $update = $this->db->update('contentdua', $data);
+        return $update;
+    }
+    
+    function deleteCs($id){
+        $this->db->where('idcontentsatu',$id);
+        $update = $this->db->delete('contentsatu');
+        return $update;
+    }
+    
+     function deleteCd($id){
+        $this->db->where('idcontentdua',$id);
+        $update = $this->db->delete('contentdua');
+        return $update;
+    }
 
 }
 

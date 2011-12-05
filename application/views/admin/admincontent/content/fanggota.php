@@ -49,6 +49,7 @@
                     </thead>
                     <tbody>
                         <?php $i=0;
+                        if(isset ($anggota)){
 foreach ($anggota as $r) {
     $i++;?>
                         
@@ -78,7 +79,7 @@ foreach ($anggota as $r) {
                         
                         
                         <?php
-}?>
+}}?>
                         
 
                        
