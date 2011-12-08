@@ -56,8 +56,8 @@
             color: rgb(215, 215, 62);
             font-weight: bold;
             border: 1px solid rgb(0,102,51);
-            margin-left: 180px;
-            margin-top: 180px;
+            margin-left: 145px;
+            margin-top: 145px;
             height: 30px;
             width: 50px;
             cursor: pointer;
@@ -75,6 +75,8 @@
             background-color: white;
             margin-top: 180px;
             margin-left: 20px;
+            text-align: center;
+
         }
         .background_3
         {
@@ -133,7 +135,7 @@
             height: 30px;
             width: 50px;
             margin-left: 145px;
-            margin-top: 20px;
+            margin-top: 10px;
             cursor: pointer;
         }
         .pengunjung
@@ -153,10 +155,10 @@
 
         .captca
         {
-            border: 1px solid black;
+
             position: absolute;
             height: 50px;
-            width: 100px;
+            width: 200px;
             margin-left: 0px;
             margin-top: 40px;
 
@@ -184,17 +186,17 @@
 
     <div class="background_1">
 
-         <form action="<?php echo base_url(); ?>index.php/c_update_anggota/daftar" method="post" id="login">
-       
+        <form action="<?php echo base_url(); ?>index.php/c_update_anggota/daftar" method="post" id="login">
+
             <input name="nama" type="text" value="Nama" onfocus="this.value=(this.value=='Nama') ? '' : this.value;" onblur="this.value=(this.value=='') ? 'Nama' : this.value;"/>
             <input name="angkatan" type="text" value="Angkatan" onfocus="this.value=(this.value=='Angkatan') ? '' : this.value;" onblur="this.value=(this.value=='') ? 'Angkatan' : this.value;"/>
             <input name="alamat" type="text" value="Alamat" onfocus="this.value=(this.value=='Alamat') ? '' : this.value;" onblur="this.value=(this.value=='') ? 'Alamat' : this.value;"/>
             <input name="email" type="text" value="Email/Telp" onfocus="this.value=(this.value=='Email/Telp') ? '' : this.value;" onblur="this.value=(this.value=='') ? 'Email/Telp' : this.value;"/>
             <div class="captca">
-                <img src="<?php echo base_url() ?>cap/cap.php" style="height: 50px;width: 100px"/>
+                <img src="<?php echo base_url() ?>cap/cap.php" style="height: 50px;width: 200px"/>
             </div>
             <div class="captca_form">
-                <input type="text" name="cap"/>
+                <input type="text" name="cap" style="text-align: center; width: 200px; outline: none"/>
             </div>
             <input type="submit" value="kirim" class="tombol"  />
         </form>
@@ -206,6 +208,15 @@
 
 
     <div class="background_2">
+        <div style="margin-top: 5px">
+            <?php
+            if (isset($pengunjung)) {
+                foreach ($pengunjung as $r) {
+                    echo $r->jum;
+                }
+            }
+            ?>
+        </div>
 
     </div>
     <p style="font-weight: bold;position: absolute; text-align: center; margin: 0px 0px 0px -135px;">pengunjung</p>
@@ -322,13 +333,15 @@
                                 <div id="item">
                                     <div>
                                         <p style="width: 200px; margin: 0;padding: 0;height: auto; ">
+                                            <?php echo $r->nama; ?><br/>
                                             <a href="" title="<?php echo $r->date; ?>">
                                                 <?php
                                                 $str = $r->isikomentar;
                                                 $str = parse_smileys($str, base_url() . "/smileys/");
                                                 echo $str;
                                                 ?>
-                                            </a></p>
+                                            </a>
+                                        </p><br/>
                                     </div>
                                 </div>
 
@@ -357,13 +370,13 @@
         <style>
             #img_smiley {
                 position: absolute;
-                margin-left: -22px;
-                margin-top: 5px;
+                margin-left: 3px;
+                margin-top: 33px;
                 cursor:pointer;
             }
             #img_smiley2 {
                 position: absolute;
-                margin-left: -22px;
+                margin-left: 3px;
                 margin-top: 5px;
                 cursor:pointer;
                 display: none
@@ -373,7 +386,8 @@
                 display:none;
                 position: absolute;
                 margin-top: -355px;
-                margin-left: 195px;
+                margin-left: 175px;
+                z-index: 2;
             }
 
 
@@ -432,45 +446,57 @@
             <br/>
             <label>pesan</label>
 
-            <textarea class="comments" name="comments" id="comments">
+            <textarea class="comments" name="comments" id="comments" style="padding: 5px;azimuth: left; text-align: left">
                 
-            </textarea><img src="../smileys/wink.gif" id="img_smiley" /><img src="../smileys/wink.gif" id="img_smiley2" />
+            </textarea><img src="../smileys/wink.gif" id="img_smiley" /><!--<img src="../smileys/wink.gif" id="img_smiley2" />-->
             <div class="tooltip"><?php echo $smiley_table; ?></div>
 
-
-            <script>
+            <script type="text/javascript">
                 $(document).ready(function(){
                     $("#img_smiley").click(function(){
                         $(".tooltip").fadeIn();
-                        $("#img_smiley2").css({
-                            "display":"block",
-                            "position":"absolute",
-                            "margin-left":"230px",
-                            "margin-top":"-24px"
-                        
-                        });
+                    });
+                    
+                });
+            </script>
+
+<!--            <script>
+                $(document).ready(function(){
+                    $("#img_smiley").click(function(){
+                        $(".tooltip").fadeIn();
+//                        $("#img_smiley2").css({
+//                            "display":"block",
+//                            "position":"absolute",
+//                            "margin-left":"255px",
+//                            "margin-top":"-24px"
+//                        
+//                        });
                         $("#img_smiley").css({
-                            "display":"none"
+                            "display":"inline-block",
+                            "position":"absolute",
+                            "margin-left":"255px",
+                            "margin-top":"-30px",
+                            "z-index":"3"
                         });
                     });
                     
                    
                     
-                    $("#img_smiley2").click(function(){
-                        $(".tooltip").fadeOut();
-                        $("#img_smiley").css({
-                            "display":"block",
-                            "position":"absolute",
-                            "margin-left":"230px",
-                            "margin-top":"-24px"
-                        });
-                        $("#img_smiley2").css({
-                            "display":"none"
-                        });
-                    });
+//                    $("#img_smiley2").click(function(){
+//                        $(".tooltip").fadeOut();
+//                        $("#img_smiley").css({
+//                            "display":"block",
+//                            "position":"absolute",
+//                            "margin-left":"255px",
+//                            "margin-top":"-24px"
+//                        });
+//                        $("#img_smiley2").css({
+//                            "display":"none"
+//                        });
+//                    });
                 });
                
-            </script>
+            </script>-->
             <script>
                 $(document).ready(function(){
                     $(".tooltip table tbody tr td a img").click(function(){

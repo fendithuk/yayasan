@@ -31,9 +31,10 @@
         <?php $this->load->view('user/frontend/scroll/v_scroll_peluang'); ?>
         <?php $this->load->view('user/frontend/scroll/v_scroll_anggota'); ?>
         <?php $this->load->view('user/frontend/scroll/v_scroll_profil'); ?>
+
         <?php $this->load->view('user/frontend/scroll/v_scroll'); ?>  
 
     </div> <!--end panel-->
-    
+
 
 </div>

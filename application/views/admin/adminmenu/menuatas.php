@@ -20,7 +20,7 @@
                     <!-- User Dropdown Content: Start -->
                     <ul class="subnav">  
                         <li><a href="javascript:void(0);" id="setting-admin"class="icon settings">Settings</a></li>  
-                        <li><a href="javascript:void(0);" id="show" class="icon chatbubbles">Pesan</a></li> 
+                        <li><a href="<?php echo base_url(); ?>index.php/adm/pesan" id="" class="icon">Pesan</a></li> 
                         <li><a href="<?php echo base_url(); ?>index.php/admin/logout" class="icon lock">Log out</a></li>  
                     </ul>  
                     <!-- User Dropdown Content: End -->
@@ -35,74 +35,28 @@
             <!-- Messages Popup Content: Start -->
 
             <div id="settingAdmin" class="box_content padding" title="Merubah Password Admin">
-                <form>
+                <?php echo form_open('admin/change'); ?>
                     <div class="field" >
                         <label>Username</label>
-                        <input type="text" class="big validate">
+                        <input type="hidden" name="idadmin" value="<?php echo $this->session->userdata('ID');?>" class="big validate" readonly="true">
+
+                        <input type="text" name="admin" value="<?php echo $this->session->userdata('USERNAME');?>" class="big validate">
 
                         <label>Password Lama</label>
-                        <input type="text" class="big validate">
+                        <input type="password" name="pl"class="big validate">
 
                         <label>Password Baru</label>
-                        <input type="text" class="big validate">
+                        <input type="password" name="pb" class="big validate">
 
                         <label>Ulangi Password Baru</label>
-                        <input type="text" class="big validate">
+                        <input type="password" name="upb" class="big validate">
                     </div>
-                    <a href="" class="button" style="float: right;margin-right: 40px;">Ganti Password</a>
+                    <input type="submit" value="Ganti Password" class="button"/>
                 </form>
 
             </div> 
 
-            <div class="box_content padding hide" id="dialog" title="Pesan Baru">
-                <form>	
-
-                    <!-- Message From User: Start -->
-                    <h6>
-                        <span class="icon user"></span> <a href="#">Jenny</a> <span class="nobold">berkata</span>
-                        <small class="right grey nobold">2 hours ago</small> 
-                    </h6>
-                    <p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-						sed do eiusmod tempor incididunt ut labore et dolore magna 
-						aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-                    </p> 
-                    <button>Setujui</button>
-                    <button class="secondary" type="reset">Tolak</button>
-                    <br/><br/>
-
-                    <!-- Message From User: End -->
-
-                    <!-- Message From User: Start -->
-                    <h6>
-                        <span class="icon user"></span> <a href="#">Jenny</a> <span class="nobold">berkata</span>
-                        <small class="right grey nobold">15 hours ago</small> 
-                    </h6>
-                    <p>
-						Sed do eiusmod tempor incididunt ut labore et dolore magna 
-						aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-                    </p>
-                    <button>Setujui</button>
-                    <button class="secondary" type="reset">Tolak</button>
-
-                    <!-- Message From User: End -->
-
-                    <!-- Quick Reply: Start -->
-                    <div class="field">
-                        <label>
-                            <span class="icon chatbubbles"></span>
-							Quick Reply
-                        </label>
-                        <textarea cols="50" rows="7"></textarea>
-                    </div>
-
-                    <button>Send</button>
-                    <button class="secondary" type="reset">Reset</button>
-
-                    <!-- Quick Reply: End -->
-
-                </form>
-            </div>
+           
 
 
             <!-- Messages Popup Content: End -->

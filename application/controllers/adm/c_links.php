@@ -17,6 +17,9 @@ class C_links extends Ci_controller {
         parent::__construct();
         $this->load->model('model_links');
         $this->load->library('form_validation');
+        $this->load->model('model_smile');
+        $this->load->helper('smiley');
+        $this->load->library('table');
     }
 
     function index() {

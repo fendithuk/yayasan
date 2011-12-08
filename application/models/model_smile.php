@@ -33,6 +33,27 @@ class model_smile extends Ci_Model{
         }
     }
     
+    function getKomenOk() {
+        $this->db->select('*');
+        $this->db->from('komentar');
+        $this->db->where('konfirmasi', 'ok');
+        $this->db->order_by('idkomentar','desc');
+        $this->db->limit('20');
+
+        $query = $this->db->get();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return NULL;
+        }
+    }
+    
+    function editConfirm($id) {
+        $this->db->where('idkomentar', $id);
+        $this->db->set('konfirmasi', 'ok');
+        $update = $this->db->update('komentar');
+        return $update;
+   }
     
 }
 

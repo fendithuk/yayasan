@@ -18,6 +18,9 @@ class C_anggota extends Ci_controller {
         $this->load->model('model_anggota');
         $this->load->library('form_validation');
         $this->load->helper('text');
+        $this->load->model('model_smile');
+        $this->load->helper('smiley');
+        $this->load->library('table');
     }
 
     function index() {

@@ -18,6 +18,9 @@ class c_profil extends Ci_controller {
         $this->load->model('model_content');
         $this->load->helper('text');
         $this->load->library('form_validation');
+        $this->load->model('model_smile');
+        $this->load->helper('smiley');
+        $this->load->library('table');
     }
 
     function index() {

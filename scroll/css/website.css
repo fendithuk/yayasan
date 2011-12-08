@@ -13,6 +13,7 @@
     margin-left: 150px;
     border-radius: 20px;
     height: 600px;
+    
 }
 
 #scrollbar1 .viewport
@@ -84,12 +85,12 @@
     color: white;
     text-align: justify;
     text-indent: 20px;
-    overflow: hidden;
-    position: relative;
-    height: 190px;
+    
+    position: static;
+    height: auto;
     width: 480px;
     font-weight: bold;
-    margin-bottom: -60px;
+    
 }
 
 #scrollbar1 .viewport .img_yayasan
@@ -103,7 +104,7 @@
 
 #scrollbar1 .viewport img
 {
-
+    margin: 0px 5px 3px 0px;
     float: left;
     height: 20px;
     width: 20px;
@@ -280,7 +281,7 @@
     margin-left: 150px;
     border-radius: 20px;
     height: 600px;
-
+    
 }
 
 #scrollbar5 .viewport h3
@@ -295,22 +296,23 @@
 #scrollbar5 .viewport img
 {
 
-
+    margin: 0px 5px 3px 0px;
     float: left;
     height: 200px;
     width: 200px;
-
+   
 }
 
 #scrollbar5 .viewport p
 {
     color: white;
-    text-align: justify;
+    text-align: left;
     overflow: hidden;
     position: relative;
     height: auto;
     width: 480px;
     font-weight: bold;
+    
 
 }
 
@@ -341,6 +343,18 @@
     text-align: left
 }
 
+#scrollbar5 .overview 
+{
+    list-style: none; 
+    position: absolute;
+    left: 0; 
+    top: 0; 
+    padding: 0; 
+    margin: 20px 0px 0px 0px; 
+    width: 500px;
+    height: auto;
+}
+
 
 #scrollbar1 .viewport hr,#scrollbar2 .viewport hr,#scrollbar4 .viewport hr,#scrollbar5 .viewport hr
 {
@@ -351,7 +365,7 @@
 }
 
 
-#scrollbar1 .overview,#scrollbar2 .overview,#scrollbar3 .overview,#scrollbar4 .overview,#scrollbar5 .overview 
+#scrollbar1 .overview,#scrollbar2 .overview,#scrollbar3 .overview,#scrollbar4 .overview
 { 
     list-style: none; 
     position: absolute;

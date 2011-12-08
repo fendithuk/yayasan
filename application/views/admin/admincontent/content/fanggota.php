@@ -65,7 +65,7 @@ foreach ($anggota as $r) {
                            
 
                           <?php }else{ ?>
-                               <td class="align_left center"><a href="javascript:void(0);" class="confirm-anggota" idangkat="<?php echo $r->iddataangkatan;?>">Konfirmasi<?php echo $r->iddataangkatan;?></a></td>
+                               <td class="align_left center"><a href="javascript:void(0);" class="confirm-anggota" idangkat="<?php echo $r->iddataangkatan;?>">Konfirmasi</a></td>
                                
                           <?php }
 ?>

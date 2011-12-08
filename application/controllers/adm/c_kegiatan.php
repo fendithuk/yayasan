@@ -17,6 +17,9 @@ class c_kegiatan extends Ci_controller {
         parent::__construct();
         $this->load->model('model_content');
         $this->load->helper('text');
+        $this->load->model('model_smile');
+        $this->load->helper('smiley');
+        $this->load->library('table');
     }
 
     function index() {

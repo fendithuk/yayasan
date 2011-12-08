@@ -9,6 +9,10 @@
         <div class="notice success">
             <p><b>Success:</b> Data berhasil disimpan.</p>
         </div>
+    <?php } else if ($msg == "gagal2") { ?>
+        <div class="notice warning">
+            <p><b>PERHATIAN:</b> Password lama salah atau password baru tidak sama dengan ulangi password baru.</p>
+        </div>
     <?php } ?>
     <!-- Info Notice: Start -->
     <div class="notice info">
@@ -29,14 +33,14 @@
 
         <p class="center">
             <!-- List of big icons for quicklinks -->
-         
+
             <a href="javascript:void(0);" id="tambah-anggota" class="big_button add_user"><span>Tambah Anggota</span></a>
-            <a href="javascript:void(0);" id="show-msg" class="big_button new_pm"><span>pesan<br/> Baru</span></a>
+
         </p>
 
     </div>
     <!-- Box Content: End -->
-   
+
 
     <div id="tambahAnggota" class="box_content padding" title="Menambah Anggota">
         <?php echo form_open('adm/dashboar/add'); ?>
@@ -70,55 +74,7 @@
 
     </div> 
 
-    <div class="box_content padding hide" id="dialog" title="Pesan Baru">
-        <form>	
 
-            <!-- Message From User: Start -->
-            <h6>
-                <span class="icon user"></span> <a href="#">Jenny</a> <span class="nobold">berkata</span>
-                <small class="right grey nobold">2 hours ago</small> 
-            </h6>
-            <p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-						sed do eiusmod tempor incididunt ut labore et dolore magna 
-						aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-            </p> 
-            <button>Setujui</button>
-            <button class="secondary" type="reset">Tolak</button>
-            <br/><br/>
-
-            <!-- Message From User: End -->
-
-            <!-- Message From User: Start -->
-            <h6>
-                <span class="icon user"></span> <a href="#">Jenny</a> <span class="nobold">berkata</span>
-                <small class="right grey nobold">15 hours ago</small> 
-            </h6>
-            <p>
-						Sed do eiusmod tempor incididunt ut labore et dolore magna 
-						aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-            </p>
-            <button>Setujui</button>
-            <button class="secondary" type="reset">Tolak</button>
-
-            <!-- Message From User: End -->
-
-            <!-- Quick Reply: Start -->
-            <div class="field">
-                <label>
-                    <span class="icon chatbubbles"></span>
-							Quick Reply
-                </label>
-                <textarea cols="50" rows="7"></textarea>
-            </div>
-
-            <button>Send</button>
-            <button class="secondary" type="reset">Reset</button>
-
-            <!-- Quick Reply: End -->
-
-        </form>
-    </div>
 
 </div>
 <!-- 100% Box Grid Container: End -->
@@ -152,35 +108,47 @@
             <thead>
                 <tr>
                     <td></td>
-                    <th scope="col"> Jan </th>
-                    <th scope="col"> Feb </th>
-                    <th scope="col"> Mar </th>
-                    <th scope="col"> Apr </th>
-                    <th scope="col"> May </th>
-                    <th scope="col"> Jun </th>
-                    <th scope="col"> Jul </th>
-                    <th scope="col"> Aug </th>
-                    <th scope="col"> Sep </th>
-                    <th scope="col"> Oct </th>
-                    <th scope="col"> Nov </th>
-                    <th scope="col"> Dec </th>
+                    <?php
+                    $i = 0;
+                    foreach ($conTgl as $r):
+                        $i++;
+                    $tgl = substr($r->tanggal, 8);
+                                $bln = substr($r->tanggal, 5, 2);
+                                $th = substr($r->tanggal, 2, 2);
+                        $balik[$i] = "$tgl/$bln/$th";
+                    endforeach;
+                    ?>
+                    <th scope="col"><?php 
+                       
+                    echo $balik[12]; ?></th>
+                    <th scope="col"><?php echo $balik[11]; ?> </th>
+                    <th scope="col"> <?php echo $balik[10]; ?> </th>
+                    <th scope="col"> <?php echo $balik[9]; ?> </th>
+                    <th scope="col"> <?php echo $balik[8]; ?> </th>
+                    <th scope="col"> <?php echo $balik[7]; ?> </th>
+                    <th scope="col"> <?php echo $balik[6]; ?></th>
+                    <th scope="col"> <?php echo $balik[5]; ?> </th>
+                    <th scope="col"> <?php echo $balik[4]; ?> </th>
+                    <th scope="col"> <?php echo $balik[3]; ?> </th>
+                    <th scope="col"> <?php echo $balik[2]; ?> </th>
+                    <th scope="col"> <?php echo $balik[1]; ?> </th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <th scope="row"> Pengunjung </th>
-                    <td> 45 </td>
-                    <td> 65 </td>
-                    <td> 56 </td>
-                    <td> 133 </td>
-                    <td> 124 </td>
-                    <td> 63 </td>
-                    <td> 56 </td>
-                    <td> 94 </td>
-                    <td> 76 </td>
-                    <td> 106 </td>
-                    <td> 45 </td>
-                    <td> 77 </td>
+                    <td><?php echo $aa1; ?> </td>
+                    <td> <?php echo $aa2; ?> </td>
+                    <td> <?php echo $aa3; ?> </td>
+                    <td> <?php echo $aa4; ?> </td>
+                    <td> <?php echo $aa5; ?> </td>
+                    <td> <?php echo $aa6; ?> </td>
+                    <td> <?php echo $aa7; ?> </td>
+                    <td> <?php echo $aa8; ?> </td>
+                    <td> <?php echo $aa9; ?> </td>
+                    <td> <?php echo $aa10; ?> </td>
+                    <td> <?php echo $aa11; ?> </td>
+                    <td> <?php echo $aa12; ?></td>
                 </tr>
 
             </tbody>
@@ -188,7 +156,7 @@
         <!-- Graphs Stats Table: End -->
 
     </div>
-    
+
     <script type="text/javascript">
         $(function() {
             //$("#dialog").css({'display': 'none'});

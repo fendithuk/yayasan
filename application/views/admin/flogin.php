@@ -23,12 +23,12 @@
 				
 				<!-- Username Input: Start -->
 				<label for="username" class="label_username">User</label>
-				<input type="text" name="username" value="username" id="username" class="password tip-stay validate" title="Enter your username" />
+				<input type="text" name="username" value="username" id="username" class="password tip-stay validate" title="Enter your username" onfocus="this.value=(this.value=='username') ? '' : this.value;" onblur="this.value=(this.value=='') ? 'username' : this.value;" />
 				<!-- Username Input: End -->
 				
 				<!-- Password Input: Start -->
 				<label for="password" class="label_password">Password</label>
-				<input type="password" name="password" value="password" id="password" class="password tip-stay validate" title="Enter your password" />
+				<input type="password" name="password" value="password" id="password" class="password tip-stay validate" title="Enter your password" onfocus="this.value=(this.value=='password') ? '' : this.value;" onblur="this.value=(this.value=='') ? 'password' : this.value;" />
 				<!-- Password Input: End -->
 				
 				<!-- Login Button: Start -->

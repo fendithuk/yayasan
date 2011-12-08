@@ -22,7 +22,7 @@
 	<script type="text/javascript" src="<?php echo base_url();?>jsadmin/jquery.cookie.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>jsadmin/jquery.styleswitcher.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>jsadmin/jquery.visualize.js"></script>
-	
+	 <?php echo smiley_js(); ?>
 </head>
 
 <body>

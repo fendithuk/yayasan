@@ -8,6 +8,7 @@ class C_update_anggota extends CI_Controller {
         $this->load->model('model_gambar');
         $this->load->model('model_content');
         $this->load->model('model_anggota');
+        $this->load->model('model_conter');
         $this->load->helper('text');
         $this->load->library('form_validation');
         $this->load->helper('smiley');
@@ -23,8 +24,8 @@ class C_update_anggota extends CI_Controller {
         $data['profil'] = $this->model_content->getContentDua(2);
         $data['peluang'] = $this->model_content->getContentDua(3);
         $data['kegiatan'] = $this->model_content->getContentSatu(4);
-        $data['komen'] = $this->model_smile->getKomen();
-
+        $data['komen'] = $this->model_smile->getKomenOk();
+        $data['pengunjung'] = $this->model_conter->counAll();
 
         $image_array = get_clickable_smileys('../smileys/', 'comments');
 
@@ -68,13 +69,14 @@ class C_update_anggota extends CI_Controller {
                 'thnangkatan' => $this->input->post('angkatan'),
                 'alamat' => $this->input->post('alamat'),
                 'email' => $this->input->post('email'),
-                'status' => "ok"
+                'status' => "belum"
             );
 
             $this->model_anggota->add($dataAnggota);
+            redirect('c_update_anggota');
             @session_destroy();
         } else {
-            echo "salah";
+            redirect('c_update_anggota');
         }
     }
 

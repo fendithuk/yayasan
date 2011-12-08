@@ -17,6 +17,9 @@ class T_content extends Ci_controller {
     public function __construct() {
         parent::__construct();
         $this->load->model('model_content');
+        $this->load->model('model_smile');
+        $this->load->helper('smiley');
+        $this->load->library('table');
     }
 
     function index() {
