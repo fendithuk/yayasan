@@ -2,6 +2,7 @@
     <head>
 
         <title><?= $title ?></title>
+        <link rel="shortcut icon" href="<?php echo base_url(); ?>img/logo.ico" >
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/page.css" media="all"/>
         <link rel="stylesheet" href="<?php echo base_url(); ?>scroll/css/website.css" type="text/css" media="all"/>
         <link rel="stylesheet" href="<?php echo base_url(); ?>css/scroll.css" type="text/css" media="all"/>

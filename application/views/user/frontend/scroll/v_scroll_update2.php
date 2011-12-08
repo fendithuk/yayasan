@@ -385,9 +385,9 @@
             .tooltip {
                 display:none;
                 position: absolute;
-                margin-top: -355px;
-                margin-left: 175px;
-                z-index: 2;
+                margin-top: -395px;
+                margin-left: 150px;
+                z-index: 5;
             }
 
 

@@ -89,7 +89,7 @@
     position: static;
     height: auto;
     width: 480px;
-    font-weight: bold;
+/*    font-weight: bold;*/
     
 }
 
@@ -131,7 +131,7 @@
 #scrollbar3 .viewport
 {
     width: 513px;
-    height: 590px;
+    height: 560px;
     overflow: hidden;
     position: relative; 
     text-align: center;
@@ -163,7 +163,9 @@
     padding: 0;
     text-align: center;
     width: 480px;
-    border: 1px solid rgb(0,102,51);    
+    border: 1px solid rgb(0,102,51);   
+   
+    
 }
 
 #scrollbar3 .viewport table thead tr
@@ -196,10 +198,12 @@
     font-size: 13px;
 }
 
-#scrollbar3 .viewport select
+#scrollbar3 select
 {
-    margin-top: -5px;
-    margin-left: -335px;
+    margin-top: 5px;
+    
+    margin-left: 20px;
+/*    margin-left: -335px;*/
     padding: 0;
     color: rgb(215,215,62);
     position: static;
@@ -307,11 +311,11 @@
 {
     color: white;
     text-align: left;
-    overflow: hidden;
+    overflow: auto;
     position: relative;
     height: auto;
     width: 480px;
-    font-weight: bold;
+/*    font-weight: bold;*/
     
 
 }

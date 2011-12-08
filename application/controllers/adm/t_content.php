@@ -76,7 +76,7 @@ class T_content extends Ci_controller {
 
                         redirect('adm/t_content/success');
                     } else {
-                        exit;
+                        
                         $cek['cekl'] = "adm";
                         $cek['menu'] = "Master";
                         $cek['menu2'] = "Tambah Content";

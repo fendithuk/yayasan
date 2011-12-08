@@ -63,7 +63,10 @@ class C_update_anggota extends CI_Controller {
     function daftar() {
         @session_start();
         if ($_SESSION['security_code'] == $this->input->post('cap')) {
-            $dataAnggota = array(
+            if($this->input->post('nama') == "Nama" || $this->input->post('nama') == "Angkatan" || $this->input->post('nama') == "Alamat" || $this->input->post('nama') == "Email/Telp" ){
+                redirect('c_update_anggota');
+            }else{
+                 $dataAnggota = array(
                 'iddataangkatan' => NULL,
                 'nama' => $this->input->post('nama'),
                 'thnangkatan' => $this->input->post('angkatan'),
@@ -75,6 +78,8 @@ class C_update_anggota extends CI_Controller {
             $this->model_anggota->add($dataAnggota);
             redirect('c_update_anggota');
             @session_destroy();
+            }
+           
         } else {
             redirect('c_update_anggota');
         }

@@ -53,11 +53,11 @@
                                 <h4><?php echo $r->judulsketsa; ?></h4>
 
                                 <p>
-                                    <img class="img_yayasan" src="<?php echo base_url(); ?>uploads/<?php echo $r->gambarsketsa; ?>"/>
+                                    <img style="float: left" class="img_yayasan" src="<?php echo base_url(); ?>uploads/<?php echo $r->gambarsketsa; ?>"/>
                                     <?php echo $r->isisketsa; ?>
                                 </p>
 
-                                <span><a href="">baca selengkapnya</a></span>
+                                
                                 <?php
                             }
                         }

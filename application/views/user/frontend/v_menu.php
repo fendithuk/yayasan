@@ -4,16 +4,17 @@
         .fb
         {
             background-color: white;
-            margin-left: 450px;
+            margin-left: -100px;
+            margin-top: 20px;
             height: auto;
             width: auto;
             position: absolute;
-            z-index: 1;
+            z-index: 3;
             display: none;
         }
         .ym
         {
-            
+
             height: auto;
             width: auto;
             margin-left: 650px;
@@ -32,19 +33,26 @@
             });
             $("#ym").click(function(){
                 $(".ym").fadeIn();
-                $(".fb").css({
-                    "display":"none"
-                });
+                //                $(".fb").css({
+                //                    "display":"none"
+                //                });
             });
         });
     </script>
     <script>
         $(document).ready(function(){
-            $(".fb").mouseout(function(){
-                $(this).fadeOut();
-            });
+            //            $(".fb").mouseout(function(){
+            //                $(this).fadeOut();
+            //            });
             $(".ym").mouseout(function(){
                 $(this).fadeOut();
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#close").click(function(){
+                $(".fb").fadeOut();
             });
         });
     </script>
@@ -59,10 +67,11 @@
         foreach ($fb as $r) {
             ?>
             <div class="fb">
-            <?php echo $r->links; ?>
+                <div id="close" style="margin-left: 245px; width: 45px; text-align: center; cursor: pointer">close</div>
+                <?php echo $r->links; ?>
             </div>
-    <?php }
-} ?>
+        <?php }
+    } ?>
 
 
     <div class="ym">
@@ -70,9 +79,9 @@
         if (isset($ym)) {
             foreach ($ym as $r) {
                 ?>
-        <?php echo $r->links; ?><br/><br/>
-    <?php }
-} ?>
+                <?php echo $r->links; ?><br/><br/>
+            <?php }
+        } ?>
     </div>
 
 </div>
