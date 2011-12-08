@@ -3,20 +3,20 @@
     <style>
         .fb
         {
-            background-color: red;
+            background-color: white;
             margin-left: 450px;
-            height: 300px;
-            width: 300px;
+            height: auto;
+            width: auto;
             position: absolute;
             z-index: 1;
             display: none;
         }
         .ym
         {
-            background-color: blue;
-            height: 300px;
-            width: 300px;
-            margin-left: 590px;
+            
+            height: auto;
+            width: auto;
+            margin-left: 650px;
             position: absolute;
             z-index: 1;
             display: none;
@@ -54,10 +54,25 @@
         <li><a href="#" id="ym">Yahoo Messenger</a></li>
 
     </ul>
-    <div class="fb">
+    <?php
+    if (isset($fb)) {
+        foreach ($fb as $r) {
+            ?>
+            <div class="fb">
+            <?php echo $r->links; ?>
+            </div>
+    <?php }
+} ?>
 
-    </div>
+
     <div class="ym">
-
+        <?php
+        if (isset($ym)) {
+            foreach ($ym as $r) {
+                ?>
+        <?php echo $r->links; ?><br/><br/>
+    <?php }
+} ?>
     </div>
+
 </div>

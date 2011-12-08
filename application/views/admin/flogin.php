@@ -19,7 +19,7 @@
 			<!-- Logo: End -->
 			
 			<!-- Login: Start -->
-			<form action="<?php echo base_url();?>index.php/adm/dashboar" method="post" id="login">
+			<form action="<?php echo base_url();?>index.php/admin/cekLogin" method="post" id="login">
 				
 				<!-- Username Input: Start -->
 				<label for="username" class="label_username">User</label>

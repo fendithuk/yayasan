@@ -155,10 +155,10 @@
         {
             border: 1px solid black;
             position: absolute;
-            height: 100px;
-            width: 200px;
-            margin-left: 10px;
-            margin-top: 10px;
+            height: 50px;
+            width: 100px;
+            margin-left: 0px;
+            margin-top: 40px;
 
         }
         .captca_form
@@ -166,9 +166,9 @@
 
             position: absolute;
             height: 100px;
-            width: 200px;
-            margin-left: 10px;
-            margin-top: 115px;
+            width: 100px;
+            margin-left: 0px;
+            margin-top: 100px;
         }
 
     </style>
@@ -184,26 +184,27 @@
 
     <div class="background_1">
 
-        <form>
-            <input name="" type="text" value="Nama" onfocus="this.value=(this.value=='Nama') ? '' : this.value;" onblur="this.value=(this.value=='') ? 'Nama' : this.value;"/>
-            <input name="" type="text" value="Angkatan" onfocus="this.value=(this.value=='Angkatan') ? '' : this.value;" onblur="this.value=(this.value=='') ? 'Angkatan' : this.value;"/>
-            <input name="" type="text" value="Alamat" onfocus="this.value=(this.value=='Alamat') ? '' : this.value;" onblur="this.value=(this.value=='') ? 'Alamat' : this.value;"/>
-            <input name="" type="text" value="Email/Telp" onfocus="this.value=(this.value=='Email/Telp') ? '' : this.value;" onblur="this.value=(this.value=='') ? 'Email/Telp' : this.value;"/>
-           
+         <form action="<?php echo base_url(); ?>index.php/c_update_anggota/daftar" method="post" id="login">
+       
+            <input name="nama" type="text" value="Nama" onfocus="this.value=(this.value=='Nama') ? '' : this.value;" onblur="this.value=(this.value=='') ? 'Nama' : this.value;"/>
+            <input name="angkatan" type="text" value="Angkatan" onfocus="this.value=(this.value=='Angkatan') ? '' : this.value;" onblur="this.value=(this.value=='') ? 'Angkatan' : this.value;"/>
+            <input name="alamat" type="text" value="Alamat" onfocus="this.value=(this.value=='Alamat') ? '' : this.value;" onblur="this.value=(this.value=='') ? 'Alamat' : this.value;"/>
+            <input name="email" type="text" value="Email/Telp" onfocus="this.value=(this.value=='Email/Telp') ? '' : this.value;" onblur="this.value=(this.value=='') ? 'Email/Telp' : this.value;"/>
+            <div class="captca">
+                <img src="<?php echo base_url() ?>cap/cap.php" style="height: 50px;width: 100px"/>
+            </div>
+            <div class="captca_form">
+                <input type="text" name="cap"/>
+            </div>
             <input type="submit" value="kirim" class="tombol"  />
         </form>
 
 
     </div>
 
-       
-   
-    <div class="captca">
 
-    </div>
-    <form class="captca_form">
-        <input type="text"/>
-    </form>
+
+
     <div class="background_2">
 
     </div>
@@ -313,197 +314,29 @@
 
 
                 <div id="items" style="height: 5px">
+                    <?php if (isset($komen)) {
+                        foreach ($komen as $r) { ?>
+                            <div style="width: 200px;">
 
-                    <div style="width: 200px;">
+
+                                <div id="item">
+                                    <div>
+                                        <p style="width: 200px; margin: 0;padding: 0;height: auto; ">
+                                            <a href="" title="<?php echo $r->date; ?>">
+                                                <?php
+                                                $str = $r->isikomentar;
+                                                $str = parse_smileys($str, base_url() . "/smileys/");
+                                                echo $str;
+                                                ?>
+                                            </a></p>
+                                    </div>
+                                </div>
 
 
-                        <div id="item">
-                            <div>
-                                <p style="width: 200px; margin: 0;padding: 0;height: auto; ">hai</p>
                             </div>
-                        </div>
+                        <?php }
+                    } ?>
 
-
-                    </div>
-
-                    <div style="width: 200px;">
-
-
-                        <div id="item">
-
-                            <p style="width: 200px; margin: 0;padding: 0;height: auto ">apa kabar</p>
-
-                        </div>
-
-
-                    </div>
-
-                    <div style="width: 200px;">
-
-
-                        <div id="item">
-
-                            <p style="width: 200px; margin: 0;padding: 0;height: auto ">apa kabar</p>
-
-                        </div>
-
-
-                    </div>
-                    <div style="width: 200px;">
-
-
-                        <div id="item">
-
-                            <p style="width: 200px; margin: 0;padding: 0;height: auto ">apa kabar</p>
-
-                        </div>
-
-
-                    </div>
-                    <div style="width: 200px;">
-
-
-                        <div id="item">
-
-                            <p style="width: 200px; margin: 0;padding: 0;height: auto ">apa kabar</p>
-
-                        </div>
-
-
-                    </div>
-                    <div style="width: 200px;">
-
-
-                        <div id="item">
-
-                            <p style="width: 200px; margin: 0;padding: 0;height: auto ">apa kabar</p>
-
-                        </div>
-
-
-                    </div>
-                    <div style="width: 200px;">
-
-
-                        <div id="item">
-
-                            <p style="width: 200px; margin: 0;padding: 0;height: auto ">apa kabar</p>
-
-                        </div>
-
-
-                    </div>
-                    <div style="width: 200px;">
-
-
-                        <div id="item">
-
-                            <p style="width: 200px; margin: 0;padding: 0;height: auto ">apa kabar</p>
-
-                        </div>
-
-
-                    </div>
-                    <div style="width: 200px;">
-
-
-                        <div id="item">
-
-                            <p style="width: 200px; margin: 0;padding: 0;height: auto ">apa kabar</p>
-
-                        </div>
-
-
-                    </div>
-                    <div style="width: 200px;">
-
-
-                        <div id="item">
-
-                            <p style="width: 200px; margin: 0;padding: 0;height: auto ">apa kabar</p>
-
-                        </div>
-
-
-                    </div>
-                    <div style="width: 200px;">
-
-
-                        <div id="item">
-
-                            <p style="width: 200px; margin: 0;padding: 0;height: auto ">apa kabar</p>
-
-                        </div>
-
-
-                    </div>
-                    <div style="width: 200px;">
-
-
-                        <div id="item">
-
-                            <p style="width: 200px; margin: 0;padding: 0;height: auto ">apa kabar</p>
-
-                        </div>
-
-
-                    </div>
-                    <div style="width: 200px;">
-
-
-                        <div id="item">
-
-                            <p style="width: 200px; margin: 0;padding: 0;height: auto ">apa kabar</p>
-
-                        </div>
-
-
-                    </div>
-                    <div style="width: 200px;">
-
-
-                        <div id="item">
-
-                            <p style="width: 200px; margin: 0;padding: 0;height: auto ">apa kabar</p>
-
-                        </div>
-
-
-                    </div>
-                    <div style="width: 200px;">
-
-
-                        <div id="item">
-
-                            <p style="width: 200px; margin: 0;padding: 0;height: auto ">apa kabar</p>
-
-                        </div>
-
-
-                    </div>
-                    <div style="width: 200px;">
-
-
-                        <div id="item">
-
-                            <p style="width: 200px; margin: 0;padding: 0;height: auto ">apa kabar</p>
-
-                        </div>
-
-
-                    </div>
-
-                    <div style="width: 200px;">
-
-
-                        <div id="item">
-
-                            <p style="width: 200px; margin: 0;padding: 0;height: auto ">lagi dmn</p>
-
-                        </div>
-
-
-                    </div>
 
 
                 </div>
@@ -581,25 +414,25 @@
 
             }
 
-            .areatext
+            .comments
             {
                 margin: 0;
                 padding: 0;
                 max-width: 150px;
                 max-height: 100px;
                 border-radius: 10px;
-                position: static;
+
             }
 
         </style>
 
-        <form>
+        <form action="<?php echo base_url(); ?>index.php/c_update_anggota/comment" method="post" id="login">
             <label>nama</label>
-            <input type="text"/>
+            <input type="text" name="nama" id="nama"/>
             <br/>
             <label>pesan</label>
 
-            <textarea class="areatext">
+            <textarea class="comments" name="comments" id="comments">
                 
             </textarea><img src="../smileys/wink.gif" id="img_smiley" /><img src="../smileys/wink.gif" id="img_smiley2" />
             <div class="tooltip"><?php echo $smiley_table; ?></div>

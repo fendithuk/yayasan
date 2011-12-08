@@ -8,7 +8,9 @@
         <script type="text/javascript" src="<?php echo base_url(); ?>scroll/js/jquery-1.4.2.min.js"></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>js/jquery.tools.min.js"></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>js/page.js"></script>
-        
+        <script type="text/javascript" src="<?php echo base_url(); ?>js/anggota.js"></script>
+         <script type="text/javascript" src="<?php echo base_url(); ?>js/sketsa.js"></script>
+       
         <script type="text/javascript" src="<?php echo base_url(); ?>scroll/js/jquery.tinyscrollbar.min.js"></script>
         <script type="text/javascript">
             $(document).ready(function(){
@@ -20,7 +22,7 @@
                 $('#scrollbar5').tinyscrollbar();
             });
         </script>	
-       
+       <?php echo smiley_js(); ?>
         
     </head>
 

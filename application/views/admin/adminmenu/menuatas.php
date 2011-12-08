@@ -21,7 +21,7 @@
                     <ul class="subnav">  
                         <li><a href="javascript:void(0);" id="setting-admin"class="icon settings">Settings</a></li>  
                         <li><a href="javascript:void(0);" id="show" class="icon chatbubbles">Pesan</a></li> 
-                        <li><a href="" class="icon lock">Log out</a></li>  
+                        <li><a href="<?php echo base_url(); ?>index.php/admin/logout" class="icon lock">Log out</a></li>  
                     </ul>  
                     <!-- User Dropdown Content: End -->
                 </li>
@@ -127,7 +127,7 @@
 
             <!-- Navigation: Start -->
             <ul id="navigation" class="dropdown">
-                <li><a class="dashboard active" href="<?php echo base_url(); ?>index.php/dashboar">Dashboard</a></li>
+                <li><a class="dashboard active" href="<?php echo base_url(); ?>index.php/adm/dashboar">Dashboard</a></li>
 
                 <!-- Navigation Dropdown Menu Item: Start -->
                 <li class="topnav">

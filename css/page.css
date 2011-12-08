@@ -1,8 +1,8 @@
 body
 {
     text-align: center;
-    background:url('../image/bgUtama.jpg');
-    background-repeat: repeat;
+    background: #40ab4d url('../image/bgUtama.png') repeat;
+    
     font-family: arial;
 }
 
@@ -26,7 +26,7 @@ a
     margin-left: auto;
     margin-right: auto;
     width: 950px;
-    height: auto;
+    height: 600px;
     padding: 15px 65px 230px 85px;
 /*    background:url('../image/bgUtama.jpg');
     background-repeat: no-repeat;*/
@@ -229,6 +229,7 @@ a
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
     float: right;
+    margin-top : 20px;
 }
 
 

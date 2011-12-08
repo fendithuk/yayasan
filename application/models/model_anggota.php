@@ -36,6 +36,11 @@ class Model_anggota extends Ci_Model {
         }
     }
     
+    function getTahun($tahun1,$tahun2){
+        $q="SELECT * FROM dataangkatan where thnangkatan >= $tahun1 && thnangkatan <= $tahun2 && status= 'ok' ";
+        return $this->db->query($q)->result();
+    }
+    
     function editAnggota($id, $data) {
         $this->db->where('iddataangkatan', $id);
         $update = $this->db->update('dataangkatan', $data);

@@ -139,6 +139,19 @@ class model_content extends Ci_Model {
         return $update;
     }
 
+    function getSketsa() {
+        $this->db->select('kategori.namakategori as nama,contentsatu.idcontentsatu as idsketsa,contentsatu.judul as judulsketsa, contentsatu.tanggal as tanggalsketsa,contentsatu.gambar as gambarsketsa, contentsatu.isi as isisketsa');
+        $this->db->from('contentsatu');
+        $this->db->join('kategori', 'kategori.idkategori = contentsatu.idkategori');
+        $this->db->where('kategori.idkategori', 1);
+        
+        $query = $this->db->get();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return NULL;
+        }
+    }
 }
 
 ?>

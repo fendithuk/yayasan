@@ -1,5 +1,4 @@
-<div id="sket">
-    <div id="scrollbar1">
+ <div id="scrollbar1">
         <style>
             .overview span
             {
@@ -95,5 +94,4 @@
 
             </div>
         </div>
-    </div>	
-</div>
+    </div>
