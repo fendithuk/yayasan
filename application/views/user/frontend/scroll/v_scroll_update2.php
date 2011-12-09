@@ -73,7 +73,7 @@
             border: 15px solid rgb(0,102,51);
             border-radius: 3px;
             background-color: white;
-            margin-top: 180px;
+            margin-top: 150px;
             margin-left: 20px;
             text-align: center;
 
@@ -219,7 +219,7 @@
         </div>
 
     </div>
-    <p style="font-weight: bold;position: absolute; text-align: center; margin: 0px 0px 0px -135px;">pengunjung</p>
+    <p style="font-weight: bold;position: absolute; text-align: center; margin: 0px 0px 0px 30px; width: 150px;">pengunjung</p>
 
 
     <div class="background_4">
@@ -333,7 +333,7 @@
                                 <div id="item">
                                     <div>
                                         <p style="width: 200px; margin: 0;padding: 0;height: auto; ">
-                                            <?php echo $r->nama; ?><br/>
+                                            <?php echo $r->nama; ?> :<br/>
                                             <a href="" title="<?php echo $r->date; ?>">
                                                 <?php
                                                 $str = $r->isikomentar;
@@ -448,7 +448,7 @@
 
             <textarea class="comments" name="comments" id="comments" style="padding: 5px;azimuth: left; text-align: left; margin-left: -45px;outline: none">
                 
-                                                                                 </textarea><img src="../smileys/wink.gif" id="img_smiley" style="margin-top: 40px;" /><!--<img src="../smileys/wink.gif" id="img_smiley2" />-->
+                                                                                 </textarea><img src="../smileys/wink.gif" id="img_smiley" style="margin-top: 30px;" /><!--<img src="../smileys/wink.gif" id="img_smiley2" />-->
             <div class="tooltip"><?php echo $smiley_table; ?></div>
 
             <script type="text/javascript">

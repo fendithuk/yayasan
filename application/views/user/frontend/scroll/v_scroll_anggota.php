@@ -9,7 +9,7 @@
     <option value="2001-2010">Angkatan 2001-2010</option>
     <option value="2011-2020">Angkatan 2011-2020</option>
 </select>
-    <div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
+    <div class="scrollbar"><div class="track"><div class="thumb"><div class=""></div></div></div></div>
     <div class="viewport">
         <div class="overview">
 

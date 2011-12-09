@@ -1,6 +1,6 @@
 <div id="scrollbar2">
 
-    <div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
+    <div class="scrollbar"><div class="track"><div class="thumb"><div class=""></div></div></div></div>
     <div class="viewport">
         <div class="overview">
             <?php if (isset($profil)) {

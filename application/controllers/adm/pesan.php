@@ -37,6 +37,16 @@ class pesan extends Ci_controller {
         $this->load->view('admin/admincontent/content/fpesan', $cek);
         $this->load->view('admin/adminfooter');
     }
+    
+    function delete(){
+        $id = $this->input->post('idps');
+        $this->model_smile->delete($id);
+        $cek['cekl'] = "";
+        $cek['komen'] = $this->model_smile->getKomen();
+        $this->load->view('admin/adminheader');
+        $this->load->view('admin/admincontent/content/fpesan', $cek);
+        $this->load->view('admin/adminfooter');
+    }
 
 }
 

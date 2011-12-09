@@ -55,6 +55,11 @@ class model_smile extends Ci_Model{
         return $update;
    }
     
+   function delete($id){
+        $this->db->where('idkomentar',$id);
+        $update = $this->db->delete('komentar');
+        return $update;
+    }
 }
 
 ?>

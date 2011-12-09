@@ -33,7 +33,7 @@
 
             <div class="field">
                 <label>Content</label>
-                <input type="text" name="idgambar" value="<?php echo $r->idgambar; ?>" class="big validate" readonly="true">
+                <input type="hidden" name="idgambar" value="<?php echo $r->idgambar; ?>" class="big validate" readonly="true">
 
                 <input type="text" name="content" value="<?php echo $r->letak; ?>" class="big validate" readonly="true">
             </div>
@@ -42,6 +42,7 @@
             <div class="field">
                 <label>links</label>
                 <input type="text" name="link" value="<?php echo $r->links ?>" class="big validate">
+                <br/><br/><p>Alamat links gambar tidak menggunakan http://. Contoh : www.insanharmoni.com</p>
             </div>
 
 

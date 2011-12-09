@@ -20,7 +20,7 @@
                     <!-- User Dropdown Content: Start -->
                     <ul class="subnav">  
                         <li><a href="javascript:void(0);" id="setting-admin"class="icon settings">Settings</a></li>  
-                        <li><a href="<?php echo base_url(); ?>index.php/adm/pesan" id="" class="icon">Pesan</a></li> 
+                        <li><a href="<?php echo base_url(); ?>index.php/adm/pesan" id="" class="icon chatbubbles">Pesan</a></li> 
                         <li><a href="<?php echo base_url(); ?>index.php/admin/logout" class="icon lock">Log out</a></li>  
                     </ul>  
                     <!-- User Dropdown Content: End -->
@@ -76,7 +76,7 @@
         <div id="header">
 
             <!-- Logo: Start -->
-            <a href="dashboard.html" id="logo">Admin Insan Harmoni</a>
+            <a href="" id="logo">Admin Insan Harmoni</a>
             <!-- Logo: End -->
 
             <!-- Navigation: Start -->

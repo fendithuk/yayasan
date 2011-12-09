@@ -23,7 +23,7 @@
         <div class="scrollbar">
             <div class="track">
                 <div class="thumb">
-                    <div class="end">
+                    <div class="">
 
                     </div>
 
@@ -72,7 +72,7 @@
                 </ul>
 
 
-                <h3>Tulisan lainnya</h3>
+                <h3>Tulisan lainnya</h3><br/>
                 <?php
                 if (isset($sketsa)) {
                     foreach ($sketsa as $r) {
@@ -80,7 +80,7 @@
                         $bln = substr($r->tanggalsketsa, 5, 2);
                         $th = substr($r->tanggalsketsa, 0, 4);
                         ?>
-                        <p><a href="<?php  echo base_url()?>index.php/c_page/getSketsa/<?php echo $r->idsketsa?>" onclick=""><?php echo "$tgl/$bln/$th. $r->judulsketsa" ?></a></p>
+                <p style="font-weight: bold"><a href="<?php  echo base_url()?>index.php/c_page/getSketsa/<?php echo $r->idsketsa?>" onclick=""><?php echo "$tgl/$bln/$th. $r->judulsketsa" ?></a></p>
                         <?php
                     }
                 }

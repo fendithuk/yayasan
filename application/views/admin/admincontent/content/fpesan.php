@@ -54,7 +54,8 @@
                                                 echo $str;
                                                 ?>
                                             </a></td>
-                                            <td class="align_left center"><a href="#" class="confirm-pesan" idpsn="<?php echo $r->idkomentar?>">Konfirmasi</a></td>
+                                            <td class="align_left center"><a href="#" class="confirm-pesan" idpsn="<?php echo $r->idkomentar?>">Konfirmasi</a> || 
+                                            <a href="#" class="delete-pesan" idps="<?php echo $r->idkomentar?>">Delete</a></td>
 
                                 </tr>
                                 <?php
@@ -71,6 +72,17 @@
                             <div class="field" >
                                 <p>Apa anda yakin konfirmasi pesan ini?</p>
                                 <input type="hidden" name="idpsn" id="idpsn" class="big validate" >
+                                
+                            </div>
+                            <input type="submit" value="Konfirmasi"/>
+                        </form>
+
+                    </div> 
+                    <div class="box_content padding fdelpesn" title="Konfirmasi Anggota">
+                        <?php echo form_open(base_url().'index.php/adm/pesan/delete'); ?>
+                            <div class="field" >
+                                <p>Apa anda yakin hapus pesan ini?</p>
+                                <input type="hidden" name="idps" id="idps" class="big validate" >
                                 
                             </div>
                             <input type="submit" value="Konfirmasi"/>
@@ -110,6 +122,27 @@
             $('#idpsn').val(id);
         });
         $(".fconpesn").dialog({
+            bgiframe: true,
+            autoOpen: false,
+            height: 230,
+            width :350,
+            modal: true
+			
+        });
+    });
+</script>
+
+<script type="text/javascript">
+    $(function() {
+        //$("#dialog").css({'display': 'none'});
+        $(".delete-pesan").click( function (){
+            $('.fdelpesn').dialog('open');
+            var id = $(this).attr("idps");
+        
+           
+            $('#idps').val(id);
+        });
+        $(".fdelpesn").dialog({
             bgiframe: true,
             autoOpen: false,
             height: 230,

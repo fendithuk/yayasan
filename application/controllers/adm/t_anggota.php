@@ -45,7 +45,7 @@ class T_anggota extends Ci_controller {
             $this->form_validation->set_rules('angkatan', 'Angkatan', 'required');
             $this->form_validation->set_rules('alamat', 'Alamat', 'required');
             $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
-            if ($this->form_validation->run() == FALSE) {
+            if ($this->form_validation->run() == FALSE || ( $this->input->post('angkatan') <= 1969 || $this->input->post('angkatan') >= 2021) ) {
                 $cek['cekl'] = "adm";
                 $cek['menu'] = "Master";
                 $cek['menu2'] = "Tambah Anggota";

@@ -32,6 +32,7 @@ class model_content extends Ci_Model {
         $this->db->from('contentsatu');
         $this->db->join('kategori', 'kategori.idkategori = contentsatu.idkategori');
         $this->db->where('kategori.idkategori', $id);
+        $this->db->order_by('tanggal','desc');
 
 
         $query = $this->db->get();
@@ -84,7 +85,7 @@ class model_content extends Ci_Model {
             return NULL;
         }
     }
-    
+
     function getProfil($id) {
         $this->db->select('kategori.namakategori as nama,contentdua.idcontentdua as idsketsa,contentdua.judul as judulsketsa, contentdua.isi as isisketsa');
         $this->db->from('contentdua');
@@ -98,7 +99,7 @@ class model_content extends Ci_Model {
             return NULL;
         }
     }
-    
+
     function getPeluang($id) {
         $this->db->select('kategori.namakategori as nama,contentdua.idcontentdua as idsketsa,contentdua.judul as judulsketsa, contentdua.isi as isisketsa');
         $this->db->from('contentdua');
@@ -112,29 +113,29 @@ class model_content extends Ci_Model {
             return NULL;
         }
     }
-    
-    function editContentSatu($data,$idk,$idc){
+
+    function editContentSatu($data, $idk, $idc) {
         $this->db->where('idkategori', $idk);
-        $this->db->where('idcontentsatu',$idc);
+        $this->db->where('idcontentsatu', $idc);
         $update = $this->db->update('contentsatu', $data);
         return $update;
     }
-    
-    function editContentDua($data,$idk,$idc){
+
+    function editContentDua($data, $idk, $idc) {
         $this->db->where('idkategori', $idk);
-        $this->db->where('idcontentdua',$idc);
+        $this->db->where('idcontentdua', $idc);
         $update = $this->db->update('contentdua', $data);
         return $update;
     }
-    
-    function deleteCs($id){
-        $this->db->where('idcontentsatu',$id);
+
+    function deleteCs($id) {
+        $this->db->where('idcontentsatu', $id);
         $update = $this->db->delete('contentsatu');
         return $update;
     }
-    
-     function deleteCd($id){
-        $this->db->where('idcontentdua',$id);
+
+    function deleteCd($id) {
+        $this->db->where('idcontentdua', $id);
         $update = $this->db->delete('contentdua');
         return $update;
     }
@@ -144,7 +145,7 @@ class model_content extends Ci_Model {
         $this->db->from('contentsatu');
         $this->db->join('kategori', 'kategori.idkategori = contentsatu.idkategori');
         $this->db->where('kategori.idkategori', 1);
-        
+        $this->db->order_by('tanggal', 'desc');
         $query = $this->db->get();
         if ($query->num_rows() > 0) {
             return $query->result();
@@ -152,6 +153,7 @@ class model_content extends Ci_Model {
             return NULL;
         }
     }
+
 }
 
 ?>
