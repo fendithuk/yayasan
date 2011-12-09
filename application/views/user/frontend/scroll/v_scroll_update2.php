@@ -442,13 +442,13 @@
 
         <form action="<?php echo base_url(); ?>index.php/c_update_anggota/comment" method="post" id="login">
             <label>nama</label>
-            <input type="text" name="nama" id="nama"/>
+            <input type="text" name="nama" id="nama" style="outline: none"/>
             <br/>
-            <label>pesan</label>
+            <label style="margin-top: 15px; float: left; margin-left: 45px; ">pesan</label>
 
-            <textarea class="comments" name="comments" id="comments" style="padding: 5px;azimuth: left; text-align: left">
+            <textarea class="comments" name="comments" id="comments" style="padding: 5px;azimuth: left; text-align: left; margin-left: -45px;outline: none">
                 
-            </textarea><img src="../smileys/wink.gif" id="img_smiley" /><!--<img src="../smileys/wink.gif" id="img_smiley2" />-->
+                                                                                 </textarea><img src="../smileys/wink.gif" id="img_smiley" style="margin-top: 40px;" /><!--<img src="../smileys/wink.gif" id="img_smiley2" />-->
             <div class="tooltip"><?php echo $smiley_table; ?></div>
 
             <script type="text/javascript">
