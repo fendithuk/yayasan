@@ -6,16 +6,14 @@
 	<div class="login">
 		
 	<!-- Info Notice: Start -->
-	<div class="notice info">
-		<p>Just press the <b>login button</b> on the right, or focus a field and enter to login</a>.</p>
-	</div>
+	
 	<!-- Info Notice: End -->
 	
 		<!-- Header: Start -->
 		<div id="header">
 				
 			<!-- Logo: Start -->
-			<a href="#" id="logo">Simplpan - Admin Panel</a>
+			<a href="<?php echo base_url();?>" id="logo">Simplpan - Admin Panel</a>
 			<!-- Logo: End -->
 			
 			<!-- Login: Start -->
@@ -45,15 +43,7 @@
 		<div id="breadcrumb">
 			
 			<!-- Breadcrumb: Start -->
-			<ul class="left">
-				<li class="icon key"><a href="#">Forgot password?</a></li>
-			</ul>
-			<!-- Breadcrumb: End -->
 			
-			<!-- Breadcrumb Icon Links: Start -->
-			<ul class="right">
-				<li><a href="#" class="icon home tip" title="Home">Home</a></li>
-			</ul>
 			<!-- Breadcrumb Icon Links: End -->
 			
 		</div>

@@ -187,11 +187,11 @@
     <div class="background_1">
 
         <form action="<?php echo base_url(); ?>index.php/c_update_anggota/daftar" method="post" id="login">
-
+            
             <input name="nama" type="text" value="Nama" onfocus="this.value=(this.value=='Nama') ? '' : this.value;" onblur="this.value=(this.value=='') ? 'Nama' : this.value;"/>
             <input name="angkatan" type="text" value="Angkatan" onfocus="this.value=(this.value=='Angkatan') ? '' : this.value;" onblur="this.value=(this.value=='') ? 'Angkatan' : this.value;"/>
             <input name="alamat" type="text" value="Alamat" onfocus="this.value=(this.value=='Alamat') ? '' : this.value;" onblur="this.value=(this.value=='') ? 'Alamat' : this.value;"/>
-            <input name="email" type="text" value="Email/Telp" onfocus="this.value=(this.value=='Email/Telp') ? '' : this.value;" onblur="this.value=(this.value=='') ? 'Email/Telp' : this.value;"/>
+            <input name="email" type="text" value="Email" onfocus="this.value=(this.value=='Email') ? '' : this.value;" onblur="this.value=(this.value=='') ? 'Email' : this.value;"/>
             <div class="captca">
                 <img src="<?php echo base_url() ?>cap/cap.php" style="height: 50px;width: 200px"/>
             </div>

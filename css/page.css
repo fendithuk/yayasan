@@ -18,6 +18,10 @@ a
     text-decoration: none;
     outline: none;
 }
+p
+{
+    letter-spacing: 1px;
+}
 /*-------------------------page wrap--------------------------------------*/
 .page_wrap
 {

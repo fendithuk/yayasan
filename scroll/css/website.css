@@ -39,7 +39,8 @@
 #scrollbar1 .viewport p
 {
     color: white;
-    text-align: justify;
+    text-align: left;
+    letter-spacing: 1px;
     overflow: hidden;
     position: relative;
     width: 480px;
